@@ -7,3 +7,8 @@
     @apply text-[#fff] text-base font-bold  
   }
 }
+@layer base{
+  html{
+    font-family: 'Archivo', sans-serif;
+  }
+}
