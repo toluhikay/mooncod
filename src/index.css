@@ -12,3 +12,45 @@
     font-family: 'Archivo', sans-serif;
   }
 }
+
+header{
+  background-color: #080A0C;
+  background-image: url(../src/assets/walletbackgroundgradient.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#walletSection{
+  background-color: #080A0C;
+  background-image:url(../src/assets/sectionBackground.png);
+  background-position: center 0;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+
+#explorer{
+  background-color: #323546;
+  background-image:url(../src/assets/manageBackground.png);
+  background-position: center 0;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+#manage{
+  background-color: #080A0C;
+  background-image:url(../src/assets/getWalletBackground.png);
+  background-position: center 0;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.dropdown {
+  background-image:url(../src/assets/dropdownbackground.png);
+  background-position: center 0;
+  background-size:cover;
+  background-repeat: no-repeat;
+  outline-style: "solid";
+  outline-width: "1px";
+  outline-color: "rgba(255, 0, 203, 0.15)";
+  outline-offset: "-1px";
+}
