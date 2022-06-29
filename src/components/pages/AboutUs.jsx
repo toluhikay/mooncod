@@ -152,7 +152,7 @@ const AboutUs = () => {
               Mooncod is trusted by approximately 10,000 verified users and 500 ecosystem partners from over 15 countries to easily and securely invest, spend, save, earn, and use cryptocurrency.'
             />
           </div>
-          <div className='w-full sm:w-4/5 md:3/4 lg:w-3/5 xlg:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 lg:gap-x-2 gap-y-8 mt-24'>
+          <div className='w-full sm:w-4/5 md:w-[88%] lg:w-3/5 xlg:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 lg:gap-x-2 gap-y-8 mt-24'>
             <DetailCard>
               <div
                 className='w-52 h-56 rounded-2xl backdrop-blur-xl bg-[#080a0c33] border-solid border-1 flex flex-col items-center justify-center gap-2.5 py-1 px-6 mx-auto'
@@ -255,7 +255,9 @@ const AboutUs = () => {
               <AboutPageHeader header={"Our executive team"} paragraph='' />
             </div>
           </div>
-          <div className='w-full h-screen mx-auto grid content-center justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 lg:gap-x-2 gap-y-8 px-8'>
+          <div
+            className='w-full mx-auto h-full mt-16 md:mt-24 xlg:mt-0 pb-8 xlg:h-[35.1rem]
+           grid content-center justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-x-2 gap-y-14 px-8'>
             <DetailCard>
               <div className='w-56'>
                 <div
