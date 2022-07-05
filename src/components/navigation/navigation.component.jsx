@@ -4,34 +4,77 @@ import { DownOutlined } from "@ant-design/icons";
 import logo from "../../assets/logomoon.png";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Wallet from "../../assets/walletIcon.png";
+import Logo from "../../assets/faviconlogo.png";
 
-//background: #181E25;
-// opacity: 0.5;
-// backdrop-filter: blur(85px);
-const DropDown = function ({ dropdownState }) {
+//  headline='Moodcod Wallet'
+// subHeadline='The best self-hosted crypto wallet'
+// link='/wallet'
+const CompanyDropdown = function ({ dropdownState }) {
+  return (
+    <div
+      className={`${
+        dropdownState ? "opacity-1" : "opacity-0"
+      } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown`}>
+      <Link
+        to='/about'
+        className='h-10 w-28 flex items-center justify-evenly bg-green-500 py-4 px-2 rounded-md mt-4'
+        style={{
+          background:
+            "linear-gradient(100.7deg, rgba(255, 255, 255, 0.4) -4.35%, rgba(255, 255, 255, 0.1) 100.97%)",
+        }}>
+        About
+      </Link>
+      <Link
+        to='/faq'
+        className='h-10 w-28 cursor-pointer flex items-center justify-evenly bg-green-500 py-4 px-2 rounded-md mt-4'
+        style={{
+          background:
+            "linear-gradient(100.7deg, rgba(255, 255, 255, 0.4) -4.35%, rgba(255, 255, 255, 0.1) 100.97%)",
+        }}>
+        FAQ
+      </Link>
+    </div>
+  );
+};
+
+const DropDownLink = function (props) {
   return (
     <div
       className={` ${
-        dropdownState ? "block" : "hidden"
-      } w-[34rem] h-[8rem] rounded-lg dropdown flex items-center justify-center absolute top-[70%] transition ease-in-out translate-y-1 duration-300`}>
+        props.dropdownState ? "opacity-1" : "opacity-0"
+      } w-[36rem] h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] left-[30%] duration-300 transition`}>
       <Link
-        to='/wallet'
+        to='/'
         className='h-20 w-64 flex items-center justify-evenly bg-green-500 py-4 px-2 rounded-md mt-4'
         style={{
           background:
             "linear-gradient(100.7deg, rgba(255, 255, 255, 0.4) -4.35%, rgba(255, 255, 255, 0.1) 100.97%)",
         }}>
         <div>
-          <img src={Wallet} alt='' />
+          <img src={Logo} alt='Buy and Sell' />
         </div>
         <div>
-          <h2 className='text-sm font-normal'>Mooncod Wallet</h2>
+          <h2 className='text-sm font-normal'>Buy and Sell</h2>
+          <p className='text-xs font-thin mt-2'>Buy, sell and use crypto</p>
+        </div>
+      </Link>
+      <Link
+        to='/wallet'
+        className='h-20 w-64 flex cursor-pointer items-center justify-evenly bg-green-500 py-4 px-2 rounded-md mt-4'
+        style={{
+          background:
+            "linear-gradient(100.7deg, rgba(255, 255, 255, 0.4) -4.35%, rgba(255, 255, 255, 0.1) 100.97%)",
+        }}>
+        <div>
+          <img src={Wallet} alt='Wallet' />
+        </div>
+        <div>
+          <h2 className='text-sm font-normal'>Moodcod Wallet</h2>
           <p className='text-xs font-thin mt-2'>
             The best self-hosted crypto wallet
           </p>
         </div>
       </Link>
-      {/* <Link to='/wallet'></Link> */}
     </div>
   );
 };
@@ -39,6 +82,7 @@ const DropDown = function ({ dropdownState }) {
 const Navigation = () => {
   const [nav, setNav] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [show, setShow] = useState(false);
 
   const handleClick = () => {
     setNav(!nav);
@@ -70,24 +114,37 @@ const Navigation = () => {
               <Link
                 to='#'
                 className='relative'
-                onClick={() => setShowDropdown(!showDropdown)}>
+                id='individual'
+                onClick={() => {
+                  setShowDropdown(!showDropdown);
+                  setShow(false);
+                }}>
                 Individuals
                 <span>
                   <DownOutlined className='text-xs ' />
                 </span>
               </Link>
             </li>
-            <DropDown dropdownState={showDropdown} />
+            <DropDownLink dropdownState={showDropdown} />
+
             <li>
               <Link to='/'>Investors</Link>{" "}
             </li>
             <li>
-              <Link to='/'>
-                Company{" "}
+              <Link
+                to='#'
+                // id='company'
+                className='relative'
+                onClick={(e) => {
+                  setShow(!show);
+                  setShowDropdown(false);
+                }}>
+                Company
                 <span>
                   <DownOutlined className='text-xs ' />
                 </span>
               </Link>
+              <CompanyDropdown dropdownState={show} />
             </li>
           </ul>
         </div>
