@@ -44,8 +44,8 @@ const Manage = () => {
                     </a>
                 </div>
               </div>
-              <div className='relative'>
-                <div className='sm:absolute flex sm:justify-end sm:items-end bottom-3 right-3'>
+              <div className='static'>
+                <div className='sm:absolute flex sm:justify-end sm:items-end sm:bottom-20 sm:right-5'>
                   <img src={bitcoinWallet} alt="" className='md:w-[80%] sm:w-[50%] h-au' />
                 </div>
               </div>

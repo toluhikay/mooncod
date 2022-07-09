@@ -145,6 +145,7 @@ import {MenuIcon, XIcon} from '@heroicons/react/outline'
 const Navigation = () => {
     const [nav, setNav] = useState(true)
     const handleClick = () =>{setNav(!nav)}
+    const closeNav = () =>{setNav(!nav)}
 
   return (
     <Fragment>
@@ -160,7 +161,7 @@ const Navigation = () => {
                 </div>
                 <div className="hidden  lg:flex w-2/4 align-middle justify-center py-2">
                     <ul className="flex w-full justify-between items-center ">
-                        <li ><Link to='about' >About Us</Link></li> 
+                        <li ><Link to='about' >Explore</Link></li> 
                         <li ><Link to='/' className='flex'>Individuals <span className='flex items-center justify-center'><DownOutlined className='text-xs ml-1 '/></span></Link></li>
                         <li ><Link to='/' >Investors</Link> </li>
                         <li ><Link to='/' className='flex items-center' >Company <span className='flex justify-center items-center '><DownOutlined className='text-xs ml-1'/></span></Link></li>
@@ -170,14 +171,15 @@ const Navigation = () => {
                 
             </div>
         </div>
-            <div className={nav? 'hidden': 'w-full h-[80%] lg:hidden bg-[#181e25] flex-col align-middle justify-center pt-2'}>
-                <ul className="flex flex-col w-full h-full justify-between items-center text-center ">
-                    <li className=' py-2 my-2 w-full'><Link to='/' >About Us</Link></li> 
+            <div className={nav? 'absolute -left-full transition linear duration-300': 'w-full h-screen top-0 left-0 absolute z-[100000] flex lg:hidden bg-[#181e25] flex-col align-middle justify-center pt-2 transition ease-in-out duration-500'}>
+                <XIcon className='text-white w-7 absolute right-4 top-4' onClick={closeNav}/>
+                <ul className="flex flex-col h-full py-16 justify-between transition linear duration-300 items-center text-center ">
+                    <li className=' py-2 my-2 w-full'><Link to='about' onClick={closeNav} >Explore</Link></li> 
                     <li className='  py-2 my-2 w-full'><Link to='/' className='flex items-center justify-center' >Individuals <DownOutlined className='text-xs ml-1'/></Link></li>
                     <li className=' py-2 my-2 w-full'><Link to='/' >Investors</Link> </li>
                     <li className='py-2 mt-2 w-full'><Link to='/' className='flex items-center justify-center' >Company <DownOutlined className='text-xs ml-1'/></Link></li>
                 </ul>
-                <button className='h-auto bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 text-white  w-full' >DOWNLOAD</button>
+                <button className='h-auto bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 text-white transition linear duration-300  w-full' >DOWNLOAD</button>
             </div>
         <Outlet />
     </Fragment>
