@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useRef } from "react";
 import SMS from "../../assets/sms.png";
 import Navigation from "../navigation/navigation.component";
 import { SearchOutlined } from "@ant-design/icons";
@@ -10,54 +10,72 @@ const questions = [
   {
     id: 0,
     headline: "Does Mooncod have transaction fees to send or receive?",
+    keyword: "Transaction fee",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "Yes. A small transaction fee is charged on every transaction.",
   },
   {
     id: 1,
-    headline: "How do I update Mooncod?",
+    headline: "Why did my transaction fail?",
+    keyword: "transaction Fail",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "Transactions can fail due to congestion on the swap chain or owing to insufficient balance.",
   },
   {
     id: 2,
-    headline: "How do I import a private key?",
+    headline: "I sent my tokens to the wrong address. What can I do?",
+    keyword: "wrong",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "Unfortunately, transactions on the blockchain are permanent and irreversible. You are advised to double-check all addresses in all transactions",
   },
   {
     id: 3,
-    headline: "How does Mooncod make money?",
+    headline: "Can I create multiple wallets on the same device?",
+    keyword: "wallet",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "You can create multiple wallets on the same device; however, they are secured by a single seed phrase and password.",
   },
   {
     id: 4,
-    headline: "Can I use the same Mooncod wallet on multiple devices?",
+    headline:
+      "Can I have my Mooncod wallet logged in on multiple devices at once?",
+    keyword: "wallet",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "Yes, once you have access to your secret phase and password, you can log in to as many devices. However, you are advised to log out on any device you do not have absolute control over",
   },
   {
     id: 5,
-    headline: "How do I contact Mooncod Support?",
+    headline:
+      "I clicked a link, and my account was hacked/phished, what can I do?",
+    keyword: "hacked",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "Unfortunately, transactions on the blockchain are permanent and irreversible. You are advised not to click any link and be sure to trust any dApp you are connecting with your wallet.",
   },
   {
     id: 6,
-    headline: "How do I create multiple portfolios on the same device?",
+    headline: "What happens if I loose my private keys/password?",
+    keyword: "password",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "You are advised to safeguard your seed phrase and password as these are the only gateways to access your wallet. You will lose access to your wallet until you provide your password and seed phrase.",
   },
   {
     id: 7,
-    headline: "What happens if I lose access to my wallet?",
+    headline: "I received a link to submit my seed phrase. Is it safe?",
+    keyword: "seed phrase",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt risus, sodales felis felis vel. Neque nam nisi, scelerisque luctus.",
+      "Mooncod will never request your private keys or seed phrase. Any link asking for your secure information is engineered for phishing",
   },
 ];
+
+// const searchQuestion = function () {
+//   questions.find((cur) => console.log(cur));
+// };
+
 const Faq = function () {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [searchQuestion, setQuestion] = useState("");
+
+  let val = useRef();
 
   const onAccordionOpen = function (id) {
     setActiveIndex(id);
@@ -119,23 +137,37 @@ const Faq = function () {
               Frequently asked questions
             </h2>
             <p className='text-sm mt-4 font-body text-center font-normal text-white'>
-              Have questions? we are we're here to help.
+              Have questions? We are here to answer.
             </p>
           </div>
         </div>
 
         <div className='w-full h-full relative py-4 '>
           <div className='w-80 h-10 mx-auto bg[#080A0C] border border-1 border-white flex items-center justify-center rounded-lg px-1'>
-            <SearchOutlined className='text-[#fff] w-7' />
+            <SearchOutlined
+              className='text-[#fff] w-7'
+              onClick={() => {
+                questions.filter((question) =>
+                  !searchQuestion
+                    .toLowerCase()
+                    .includes(question.keyword.toLowerCase())
+                    ? null
+                    : setActiveIndex(question.id)
+                );
+              }}
+            />
 
             <input
               type='search'
               className='py-1 w-full bg-transparent focus:outline-none text-white text-xs'
               id='search-question'
               placeholder='Search'
+              onChange={() => {
+                setQuestion(val.current.value);
+              }}
+              ref={val}
             />
           </div>
-
           <button
             className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-8 py-4 rounded-full text-white flex items-center justify-between fixed bottom-24 z-10'
             style={{ left: "85%" }}>
@@ -156,7 +188,7 @@ const Faq = function () {
               </h2>
               <p className='text-sm mt-4 font-body text-center font-normal text-white'>
                 If you cannot find answers to your questions in our FAQ,
-                <br /> you can always contact us. We will answer to you shortly!
+                <br /> drop us a line on our Contact page.
               </p>
             </div>
           </div>
