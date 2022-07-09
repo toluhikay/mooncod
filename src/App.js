@@ -5,18 +5,26 @@ import DirectoryLand from "./components/landing-page/directory/directorylanding.
 import Footer from "./components/footer/footer.component";
 import Wallet from "./components/pages/Wallet";
 import AboutUs from "./components/pages/AboutUs";
+import {QueryClientProvider, QueryClient} from 'react-query'
+
+const queryClient = new QueryClient()
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route index element={<DirectoryLand />}></Route>
-        <Route path='/' element={<Navigation />}></Route>
-        <Route path='wallet' element={<Wallet />}></Route>
-        <Route path='about' element={<AboutUs />}></Route>
-      </Routes>
-      <Footer />
-    </div>
+    <QueryClientProvider client={ queryClient }>
+        <div>
+          <Routes>
+            <Route path='/' element={<Navigation />}>
+              <Route index element={<DirectoryLand />}></Route>
+              
+              <Route path='wallet' element={<Wallet />}></Route>
+              <Route path='about' element={<AboutUs />}></Route>
+            </Route>
+          </Routes>
+          <Footer />
+         </div>
+    </QueryClientProvider>
+    
   );
 }
 
