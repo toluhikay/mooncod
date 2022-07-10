@@ -54,3 +54,26 @@ header{
   outline-color: "rgba(255, 0, 203, 0.15)";
   outline-offset: "-1px";
 }
+
+.companydropdown {
+  /* background-image:url(../src/assets/companydropdown.png); */
+  background-position: center 0;
+  background-size:cover;
+  background-repeat: no-repeat;
+  outline-style: "solid";
+  outline-width: "1px";
+  outline-color: "rgba(255, 0, 203, 0.15)";
+  outline-offset: "-1px";
+}
+
+#faq{
+  background-color: #080A0C;
+  background-image: url(../src/assets/walletbackgroundgradient.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.open,.icon {
+  cursor: pointer;
+}

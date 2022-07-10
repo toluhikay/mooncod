@@ -1,12 +1,14 @@
 import React, {Fragment} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logomoon.png'
-import {GithubOutlined, GoogleOutlined, LinkedinFilled, LinkedinOutlined, RedditCircleFilled, RedditOutlined, SlackOutlined, TwitterOutlined} from '@ant-design/icons'
+import {GithubOutlined, GoogleOutlined, LinkedinFilled, FacebookOutlined, RedditCircleFilled, SlackOutlined, TwitterOutlined, InstagramOutlined} from '@ant-design/icons'
+// import Telegram from '../../assets/telegram.svg'
 
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear()
 
+ 
   
   return (
     <Fragment>
@@ -91,12 +93,28 @@ const Footer = () => {
             <p className='text-white md:text-base sm:text-sm text-xs sm:pt-0 pt-4'>© <span>{year}</span> Moncod - All Rights Reserved</p>
           </div>
           <div className='text-white w-1/3 flex justify-between'>
-            <a href=""><TwitterOutlined/></a>
-            <a href=""><GithubOutlined/></a>
-            <a href=""><GoogleOutlined/></a>
-            <a href=""><RedditCircleFilled/></a>
-            <a href=""><LinkedinFilled/></a>
-            <a href=""><SlackOutlined/></a>
+            <a href="https://www.facebook.com/moodcod452" target={'_blank'} rel="noreferrer">
+            <FacebookOutlined/>
+            </a>
+            <a href="https://www.twitter.com/MoodcodWallet" target={'_blank'} rel="noreferrer">
+            <TwitterOutlined/>
+            </a>
+            <a href="https://www.reddit.com/r/Moodcod" target={'_blank'} rel="noreferrer">
+            <RedditCircleFilled/>
+            </a>
+            <a href="https://www.instagram.com/mooncodwallet" target={'_blank'} rel="noreferrer">
+              <InstagramOutlined/>
+            </a>
+            <a href="https://t.me/mooncod" target={'_blank'} rel="noreferrer">
+              {/* <Telegram/>s */}
+              {/* <Telegram/> */}
+            </a>
+
+            {/* <GithubOutlined/> */}
+            {/* <GoogleOutlined/> */}
+            {/* <LinkedinFilled/> */}
+            {/* <SlackOutlined/> */}
+
           </div>
         </div>
       </div>

@@ -5,12 +5,13 @@ import QuickStart from './quickstart.component'
 import { useQuery } from 'react-query'
 
 const BuyDirectory = () => {
-
     const coinMarkets = async  () =>{
         const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false')
         return response.json()
     }
-    const {data} = useQuery('data market prices', coinMarkets)
+    const {data,status} = useQuery('data market prices', coinMarkets)
+   
+
   return (
     <Fragment>
         <div className="bg-[#0b1f33] bg-[url('/src/assets/buyBackground.png')] bg-cover bg-center text-[#fff] lg:px-32 md:px-7 lg:py-28 md:py-12 py-5 flex flex-col items-center justify-center">
@@ -19,7 +20,8 @@ const BuyDirectory = () => {
                 <p className='md:text-lg text-base w-4/5 lg:pb-20 md:pb-11 pb-6'>Take complete control of your assets via our one-stop services platform with bank transfer and credit card compatibility, high execution speed and low fees.</p>
             </div>
             <div className='bg-[#101419] w-full h-auto md:rounded-3xl md:py-8 py-4 sm:px-9 px-4'>
-                {
+            
+             {status === 'success' && 
                     data.map((coin)=>{
                         let {name, symbol, current_price, price_change_percentage_24h} = coin
                         return <div key={coin.id} className='flex justify-between items-center border-b border-b-[#2B2C3B] md:text-2xl    sm:text-base text-xs font-bold py-5'>
@@ -41,6 +43,7 @@ const BuyDirectory = () => {
                                 </div>
                     })
                 }
+            
                 {/* <div className='flex justify-between items-center border-b border-b-[#2B2C3B] md:text-2xl sm:text-base text-xs font-bold py-5'>
                     <div className='w-1/2 flex justify-between items-center pr-4'>
                         <p>Ethereum</p>

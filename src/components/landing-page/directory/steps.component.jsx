@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import { FaUserPlus } from 'react-icons/fa'
-import {GiBank, GiSellCard} from 'react-icons/gi'
+// import { FaUserPlus } from 'react-icons/fa'
+// import {GiBank, GiSellCard} from 'react-icons/gi'
 import CryptoIcons from '../../../assets/cryptoIcons.png'
 import stepPerson from '../../../assets/stepsPerson.png'
 import stepBank from '../../../assets/stepsBank.png'
