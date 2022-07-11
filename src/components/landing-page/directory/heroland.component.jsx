@@ -23,7 +23,7 @@ const HeroLand = () => {
                     <div className='flex flex-col md:flex-row justify-evenly items-center'>
                         <button className='border-[1px] flex items-center rounded-full py-[12px] px-[18px] border-[#5F97FF] text-[#5F97FF] sm:text-base text-base font-bold'>
                             <CaretRightOutlined className='text-[#54F0D1] text-2xl mr-2'/> Watch Video</button>
-                        <button className='bg-gradient-to-r  md:text-base font-bold from-[#008AED] to-[#54F0D1] rounded-full py-[12px] px-[18px] mt-4 md:mt-0'>Get Moncod Now</button>
+                        <button className='bg-gradient-to-r md:text-base font-bold from-[#008AED] to-[#54F0D1] rounded-full py-[12px] px-[18px] mt-4 md:mt-0'>Get Moncod Now</button>
                     </div>
                 </div>
                 <div className='pt-[43px] xl:pr-28 lg:pr-12 relative'>
