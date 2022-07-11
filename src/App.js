@@ -10,22 +10,6 @@ import Faq from "./components/pages/faq";
 
 import { QueryClientProvider, QueryClient } from "react-query";
 
-// function App() {
-//   return (
-//     <div>
-//       <Routes>
-//         <Route index element={<DirectoryLand />}></Route>
-//         <Route path='/' element={<Navigation />}></Route>
-//         <Route path='wallet' element={<Wallet />}></Route>
-//         <Route path='about' element={<AboutUs />}></Route>
-//
-//       </Routes>
-//       <Footer />
-//     </div>
-// >>>>>>> otherPages
-//   );
-// }
-
 const queryClient = new QueryClient();
 
 function App() {
@@ -33,14 +17,13 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div>
         <Routes>
-          <Route path='/' element={<Navigation />}>
-            <Route index element={<DirectoryLand />}></Route>
-
-            <Route path='wallet' element={<Wallet />}></Route>
-            <Route path='about' element={<AboutUs />}></Route>
-            <Route path='faq' element={<Faq />}></Route>
-            <Route path='download' element={<Download />}></Route>
-          </Route>
+          {/* <Route path='/' element={<Navigation />}> */}
+          <Route path='/' element={<Navigation />}></Route>
+          <Route index element={<DirectoryLand />}></Route>
+          <Route path='wallet' element={<Wallet />}></Route>
+          <Route path='about' element={<AboutUs />}></Route>
+          <Route path='faq' element={<Faq />}></Route>
+          <Route path='download' element={<Download />}></Route>
         </Routes>
         <Footer />
       </div>

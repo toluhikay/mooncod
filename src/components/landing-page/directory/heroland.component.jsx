@@ -1,27 +1,32 @@
+
+
 import { ArrowRightOutlined, CaretRightOutlined, DollarCircleFilled, DownOutlined, } from '@ant-design/icons'
 import React, { Fragment } from 'react'
 import IphoneOne from '../../../assets/heroImage.png'
 import {RefreshIcon, ChatAltIcon} from '@heroicons/react/solid'
 import { useQuery } from 'react-query'
+import Header from '../../pages/Header'
 
 const HeroLand = () => {
 
     const {data, status} = useQuery
   return (
     <Fragment>
-        <div className="bg-cover bg-center bg-[url('/src/assets/heroBackground.png')] bg-[#080A0C] text-white">
-            <div className='flex flex-col justify-center items-center px-3 lg:px-32 lg:flex-row lg:justify-between pb-5 md:pt-14 pt-7'>
-                <div className='md:pt-12 lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:text-start text-center'>
-                    <p className=' md:text-[18px] text-base flex items-center mb-4'>Keep your Crypto on fire with the <ArrowRightOutlined className='text-base text-[#54F0D1] '/></p>
+        <Header>
+        <div className="bg-cover bg-center bg-[url('/src/assets/heroBackground.png')] bg-[#080A0C] text-white bg-red-600">
+            <div className='h-full bg-green-700 flex flex-col justify-center items-center px-3 lg:px-32 lg:flex-row lg:justify-between pb-5 pt-7'>
+                <div className=' lg:w-1/2 mt-28 lg:h-[30rem] flex flex-col justify-evenly items-center lg:items-start lg:text-start text-center '>
+                    <p className=' md:text-[18px] text-base flex items-center mb-4 lg:mb-0'>Keep your Crypto on fire with the <ArrowRightOutlined className='ml-2 text-base text-[#54F0D1] '/></p>
                     <h1 className='lg:text-[80px] md:text-[48px] sm:text-[30px] text-[24px] font-bold w-full mb-4 leading-none'>Mooncod Bitcoin & Crypto Wallet</h1>
                     <p className='md:text-[18px] sm:text-base text-xs mb-4'>Your one-stop service platform to receive, trade and swap Bitcoin, Ethereum and 200+ crypto tokens
                     </p>
-                    <div className='flex'>
-                        <button className='border-[1px] flex items-center rounded-full py-[12px] px-[18px] border-[#5F97FF] text-[#5F97FF] mr-[15px] sm:text-base text-xs font-bold ' ><CaretRightOutlined className='text-[#54F0D1] '/> Watch Video</button>
-                        <button className='bg-gradient-to-r  md:text-base font-bold from-[#008AED] to-[#54F0D1] rounded-full py-[12px] px-[18px]'>Get Moncod Now</button>
+                    <div className='flex flex-col md:flex-row justify-evenly items-center'>
+                        <button className='border-[1px] flex items-center rounded-full py-[12px] px-[18px] border-[#5F97FF] text-[#5F97FF] sm:text-base text-base font-bold'>
+                            <CaretRightOutlined className='text-[#54F0D1] text-2xl mr-2'/> Watch Video</button>
+                        <button className='bg-gradient-to-r  md:text-base font-bold from-[#008AED] to-[#54F0D1] rounded-full py-[12px] px-[18px] mt-4 md:mt-0'>Get Moncod Now</button>
                     </div>
                 </div>
-                <div className='pt-[43px]  xl:pr-28 lg:pr-12 relative'>
+                <div className='pt-[43px] xl:pr-28 lg:pr-12 relative'>
                     <div className='hidden lg:block w-[220px] h-[220px] bg-gradient-to-r from-[#18C8FF] to-[#933FFE] rounded-full absolute bottom-[-25px] -left-14 z-0'></div>
                     <img src={IphoneOne} alt="" className=' z-10 relative w-56 h-auto'/>
                 </div>
@@ -69,6 +74,7 @@ const HeroLand = () => {
                 </div>
             </div>
         </div>
+        </Header>
     </Fragment>
   )
 }

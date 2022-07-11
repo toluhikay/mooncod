@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 import Chart from '../../../assets/chart.png'
 import QuickStart from './quickstart.component'
 import { useQuery } from 'react-query'
+import { Link } from 'react-router-dom'
 
 const BuyDirectory = () => {
     const coinMarkets = async  () =>{
@@ -36,9 +37,9 @@ const BuyDirectory = () => {
                                             {price_change_percentage_24h.toFixed(2)}
                                         </p>
                                         <img src={Chart} alt="" className='w-[30%]' />
-                                        <p className='flex items-center justify-center md:text-base text-[8px]'>
-                                            Trade Now <ArrowRightOutlined className=' text-[7px]'/>
-                                        </p>
+                                        <Link to={'download'} className='flex items-center justify-center md:text-base text-[8px]'>
+                                            Trade Now <ArrowRightOutlined className='ml-4 text-[2s0px]'/>
+                                        </Link>
                                     </div>
                                 </div>
                     })

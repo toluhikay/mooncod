@@ -76,12 +76,12 @@ const Footer = () => {
           </div>
           <div>
             <p className=' md:text-lg font-medium mb-4 '>JOIN OUR COMMUNITY</p>
-            <div>
-              <p className=' w-80 mb-4 md:text-lg sm:text-sm text-xs'>Subscribe to receive updates, access to exclusive deals, and more.</p>
+            <div className=''>
+              <p className='w-80 mb-4 md:text-lg sm:text-sm text-xs'>Subscribe to receive updates, access to exclusive deals, and more.</p>
               <form action="">
-                <input type="text" placeholder='Enter your email address' className=' bg-inherit appearance-none border-[#fff] border-2 py-3 px-3 w-72 rounded-full outline-none text-[#000] mb-4'/>
+                <input type="text" placeholder='Enter your email address' className=' bg-inherit appearance-none border-[#fff] border-2 py-3 px-3 w-full md:w-72 rounded-full outline-none text-[#000] mb-4'/>
                 <br />
-                <button className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] w-72 py-3 rounded-full'>Subscribe</button>
+                <button className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] w-full md:w-72 py-3 rounded-full'>Subscribe</button>
               </form>
             </div>
           </div>
