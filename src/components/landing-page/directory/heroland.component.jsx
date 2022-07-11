@@ -13,8 +13,8 @@ const HeroLand = () => {
   return (
     <Fragment>
         <Header>
-        <div className="bg-cover bg-center bg-[url('/src/assets/heroBackground.png')] bg-[#080A0C] text-white bg-red-600">
-            <div className='h-full bg-green-700 flex flex-col justify-center items-center px-3 lg:px-32 lg:flex-row lg:justify-between pb-5 pt-7'>
+        <div className="bg-cover bg-center bg-[url('/src/assets/heroBackground.png')] bg-[#080A0C] text-white">
+            <div className='h-full flex flex-col justify-center items-center px-3 lg:px-32 lg:flex-row lg:justify-between pb-5 pt-7'>
                 <div className=' lg:w-1/2 mt-28 lg:h-[30rem] flex flex-col justify-evenly items-center lg:items-start lg:text-start text-center '>
                     <p className=' md:text-[18px] text-base flex items-center mb-4 lg:mb-0'>Keep your Crypto on fire with the <ArrowRightOutlined className='ml-2 text-base text-[#54F0D1] '/></p>
                     <h1 className='lg:text-[80px] md:text-[48px] sm:text-[30px] text-[24px] font-bold w-full mb-4 leading-none'>Mooncod Bitcoin & Crypto Wallet</h1>
