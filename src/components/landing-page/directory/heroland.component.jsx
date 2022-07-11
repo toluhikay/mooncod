@@ -1,11 +1,10 @@
-
-
 import { ArrowRightOutlined, CaretRightOutlined, DollarCircleFilled, DownOutlined, } from '@ant-design/icons'
 import React, { Fragment } from 'react'
 import IphoneOne from '../../../assets/heroImage.png'
 import {RefreshIcon, ChatAltIcon} from '@heroicons/react/solid'
 import { useQuery } from 'react-query'
 import Header from '../../pages/Header'
+import Input from './input.component'
 
 const HeroLand = () => {
 
@@ -13,8 +12,8 @@ const HeroLand = () => {
   return (
     <Fragment>
         <Header>
-        <div className="bg-cover bg-center bg-[url('/src/assets/heroBackground.png')] bg-[#080A0C] text-white bg-red-600">
-            <div className='h-full bg-green-700 flex flex-col justify-center items-center px-3 lg:px-32 lg:flex-row lg:justify-between pb-5 pt-7'>
+        <div className="bg-cover bg-center bg-[url('/src/assets/heroBackground.png')] bg-[#080A0C] text-white ">
+            <div className='h-full  flex flex-col justify-center items-center px-3 lg:px-32 lg:flex-row lg:justify-between pb-5 pt-7'>
                 <div className=' lg:w-1/2 mt-28 lg:h-[30rem] flex flex-col justify-evenly items-center lg:items-start lg:text-start text-center '>
                     <p className=' md:text-[18px] text-base flex items-center mb-4 lg:mb-0'>Keep your Crypto on fire with the <ArrowRightOutlined className='ml-2 text-base text-[#54F0D1] '/></p>
                     <h1 className='lg:text-[80px] md:text-[48px] sm:text-[30px] text-[24px] font-bold w-full mb-4 leading-none'>Mooncod Bitcoin & Crypto Wallet</h1>
@@ -51,20 +50,21 @@ const HeroLand = () => {
                 <div className='flex flex-col md:flex-row justify-between'>
                     <div className='flex bg-gradient-to-r from-[#ffffff40] to-[#ffffff20] bg-opacity-40 py-5 px-8 rounded-full w-full md:w-[32%] mb-5 md:mb-0 justify-between items-center relative'>
                         <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Get</p>
-                        <p className='font-bold md:text-xl text-sm'>15,000</p>
+                        {/* <p className='font-bold md:text-xl text-sm'>15,000</p>
                         <div className='flex items-center pl-[5px] border-white border-l-2 w-1/3 justify-between'>
                             <DollarCircleFilled className='text-[#008AED]'/>
                             <p className='flex items-center md:text-base text-sm font-bold'>USD <DownOutlined className="md:text-sm text-xs"/> </p>
-                        </div>
+                        </div> */}
+                        <Input/>
                     </div>
 
                     <div className='flex bg-gradient-to-r from-[#ffffff40] to-[#ffffff20] bg-opacity-40 py-5 px-8 rounded-full w-full md:w-[32%] mb-5 md:mb-0 justify-between items-center relative'>
                         <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Pay</p>
-                        <p className='font-bold md:text-xl text-sm'>0.00344</p>
+                        {/* <p className='font-bold md:text-xl text-sm'>0.00344</p>
                         <div className='flex items-center pl-[5px] border-white border-l-2 w-1/3 justify-between'>
                             <DollarCircleFilled className='text-[#008AED]'/>
                             <p className='flex items-center md:text-base text-sm font-bold'>BTC<DownOutlined className="md:text-sm text-xs"/> </p>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className='w-auto md:w-[32%] flex justify-center items-center'>
