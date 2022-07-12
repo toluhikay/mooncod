@@ -102,6 +102,14 @@ const Navigation = () => {
     setNav(!nav);
   };
 
+  // handling mobile dropdown 
+  const [mobileDrop, setMobileDrop] = useState(true)
+  const handleMobileDrop =()=> setMobileDrop(!mobileDrop);
+
+  //second mobile dropdown
+  const [mobileDrop1, setMobileDrop1] = useState(true)
+  const handleMobileDrop1 =()=> setMobileDrop1(!mobileDrop1);
+
   return (
     <Fragment>
       <div
@@ -165,18 +173,38 @@ const Navigation = () => {
                 Explore
               </Link>
             </li>
+
             <li className='  py-2 my-2 w-full'>
-              <Link to='/' className='flex items-center justify-center'>
-                Individuals <DownOutlined className='text-xs ml-1' />
-              </Link>
+              <li className='flex items-center justify-center text-white' onClick={ handleMobileDrop }>
+                Individuals <DownOutlined className='text-xs ml-1'  />
+              </li>
+              <div className={mobileDrop? 'hidden':'mt-4 border border-[#c4c4c4] py-2'}>
+                <li className="mb-3">
+                  <Link to='/' >Buy and Sell</Link>
+                </li>
+                <li>
+                  <Link to='/' >Mooncod Wallet</Link>
+                </li>
+              </div>
             </li>
+            
+
             <li className=' py-2 my-2 w-full'>
               <Link to='/'>Investors</Link>{" "}
             </li>
+
             <li className='py-2 mt-2 w-full'>
-              <Link to='/' className='flex items-center justify-center'>
+              <Link to='/' className='flex items-center justify-center' onClick={handleMobileDrop1}>
                 Company <DownOutlined className='text-xs ml-1' />
               </Link>
+              <div className={mobileDrop1? 'hidden':'mt-4 border border-[#c4c4c4] py-2'}>
+                <li className="mb-3">
+                  <Link to='/' >About</Link>
+                </li>
+                <li>
+                  <Link to='/' >FAQ</Link>
+                </li>
+              </div>
             </li>
           </ul>
           <button className='h-auto bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 text-white transition linear duration-300  w-full'>
