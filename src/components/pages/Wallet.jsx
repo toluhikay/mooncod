@@ -25,24 +25,22 @@ const Wallet = () => {
                 Mooncod Wallet
               </h2>
               <p className='lg:text-l xl:text-2xl mt-4 lg:mt-0 font-body text-center lg:text-left font-medium text-white'>
-                Your key to the world of cryptocurrency
+              Mooncod offers the most secure wallet to explore the world 0f cryptocurrencies. <br/>s Manage, swap and trade tokens from Web or Mobile
               </p>
             </div>
 
             <ul className='flex flex-col justify-evenly items-center md:items-start px-7 mt-7'>
               <li className='list-disc text-md xl:text-xl text-center lg:text-left text-white font-body mt-4 lg:mt-2 lg:mt-0 font-normal mx-auto lg:mx-0 '>
-                All of your cryptocurrency should be stored in one location.
+              Trusted by 1 million users.
               </li>
               <li className='list-disc text-md xl:text-xl text-white text-center lg:text-left font-body mt-4 lg:mt-2 lg:mt-0 mt-4 md:mt-0 font-normal mx-auto lg:mx-0 '>
-                Hundreds of thousands of tokens and a vast array of dapps are
-                supported
+              Seamless compatibility across exchanges.
               </li>
               <li className='list-disc text-md xl:text-xl text-white text-center lg:text-left font-body mt-4 lg:mt-2 lg:mt-0 font-normal mx-auto lg:mx-0 '>
-                Use your phone or browser to explore the decentralized web
+              Excellent user experience on web or mobile.
               </li>
               <li className='list-disc text-md xl:text-xl text-center lg:text-left text-white font-body mt-4 lg:mt-2 lg:mt-0 font-normal mx-auto lg:mx-0 '>
-                With industry-leading protection, you can keep your digital
-                assets safe.
+              Industry-leading security architecture for complete safety of assets.
               </li>
             </ul>
 
@@ -92,9 +90,9 @@ const Wallet = () => {
         <article className='container md:px-16 xl:px-8 mx-auto py-6'>
           <div className='mt-16'>
             <PageHeader
-              header={`Uncover the world of cryptocurrency
+              header={`A home for all your crypto assets
     `}
-              paragraph='Life on the blockchain has been simplified and made more secure.'
+              paragraph='Whether daily asset usage or future storage, Mooncod wallet is the right fit for your needs'
             />
           </div>
           {/* grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-8 md:gap-x-16 lg:gap-x-4 */}
@@ -114,8 +112,7 @@ const Wallet = () => {
                 Control your crypto
               </h6>
               <p className='text-center text-xs text-body font-normal text-[#B4C0CF]'>
-                Moodcod Wallet is a self-custody wallet that gives you full
-                control over your digital assets.
+               Moodcod Wallet is a self-custody wallet that gives you full control over your digital assets. 
               </p>
             </div>
 
@@ -185,8 +182,8 @@ const Wallet = () => {
           <div>
             <div className='mt-24'>
               <PageHeader
-                header='With Over 155+ Cryptocurrency Assets'
-                paragraph='With the mobile security of face or fingerprint scanning, you can secure, manage, and exchange your cryptocurrency'
+                header='Trade crypto in a few taps. Bitcoin, Ethereum, and more'
+                paragraph='With our easy-to-navigate wallet interface, complete control of your assets just got simplified'
               />
             </div>
             <div className='mt-36 px-4 md:px-4'>

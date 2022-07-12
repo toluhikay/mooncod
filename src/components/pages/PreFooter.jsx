@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Saly from "../../assets/Saly.png";
 
 const PreFooter = () => {
@@ -10,11 +11,11 @@ const PreFooter = () => {
             Get Mooncod Wallet
           </h4>
           <p className='text-base font-body text-center text-white font-normal px-4 md:px-0 mt-2'>
-            The magic key to your crypto world
+          Your secure bridge to Web3
           </p>
-          <button className=' bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 mt-7 text-white h-full rounded-full'>
+          <Link to={'/download'} className=' bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 mt-7 text-white h-full rounded-full'>
             DOWNLOAD
-          </button>
+          </Link>
         </div>
         <div>
           <img src={Saly} alt='saly illustration' loading='lazy' />

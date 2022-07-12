@@ -34,14 +34,13 @@ const AboutUs = () => {
     <main>
       <Header>
         <div className='container h-full md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
-          <div className='w-full pb-4 md:mb-0 mt-36 '>
+          <div className='w-full pb-4 md:mb-0 mt-36 lg:mt-40 '>
             <div>
-              <h2 className='text-3xl lg:text-4xl xl:text-4xl mb-2 font-body font-bold text-white text-center'>
-                Mooncod allows you to control your <br />
-                crypto wealth
+              <h2 className='text-3xl lg:text-4xl xl:text-4xl  mb-2 font-body font-bold text-white text-center'>
+              User-friendly crypto wallet with unique features that <br/> make your Web3 experience safe.
               </h2>
               <p className='text-lg mt-4 lg:mt-0 font-body text-center font-normal text-white'>
-                Your key to the world of cryptocurrency
+              Simple, Safe and Secure Wallet
               </p>
             </div>
           </div>
@@ -75,8 +74,7 @@ const AboutUs = () => {
               header={`About Mooncod
     `}
               paragraph='
-              At Mooncod we pour our hearts into every detail, from pixel-perfect icons to subtle sounds, creating a cryptocurrency experience that works for everyone.
-              Our goal is to remove the geek requirement and make it fun and easy to learn and use cryptocurrency. No technical talk. No confusing steps - we think it shows.
+              We believe that irrespective of the risks of the market, your crypto should be enjoyable and stress-free. Mooncod is a company that has developed a uniquely efficient crypto wallet with built-in compatibility for the web, iOS and Android devices. With a remarkable capability of holding 100+ cryptocurrencies, including Bitcoin, Ethereum, Solana, Fathom, and others in one place, our wallet app proves a breath of fresh air in the volatile crypto space. At Mooncod, we envisage revolutionizing the cryptocurrency industry to ensure that prospective market investors without deep knowledge of the technicalities can become active participants within the space through easy-to-use apps and excellent interfaces..
               '
             />
           </div>
@@ -147,9 +145,9 @@ const AboutUs = () => {
         <div className='container mx-auto'>
           <div className='pt-32'>
             <AboutPageHeader
-              header='The cryptoeconomy is powered by Mooncod. '
+              header='Our numbers speak for us'
               paragraph='Mooncod helps customers all over the world learn about cryptocurrency and get started with it.
-              Mooncod is trusted by approximately 10,000 verified users and 500 ecosystem partners from over 15 countries to easily and securely invest, spend, save, earn, and use cryptocurrency.'
+              Mooncod is trusted by approximately 10,000 verified users and 500 ecosystem partners from over 15 countries to easily and securely invest, spend, save, earn, and use cryptocurrency. '
             />
           </div>
           <div className='w-full sm:w-4/5 md:w-[88%] lg:w-3/5 xlg:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 lg:gap-x-2 gap-y-8 mt-24'>
@@ -252,7 +250,7 @@ const AboutUs = () => {
 
           <div className='w-full flex flex-col-reverse md:flex-row md:items-center md:justify-evenly mt-24'>
             <div className='w-full'>
-              <AboutPageHeader header={"Our executive team"} paragraph='' />
+              <AboutPageHeader header={"Our Core Team"} paragraph='' />
             </div>
           </div>
           <div

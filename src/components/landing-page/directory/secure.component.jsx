@@ -1,4 +1,3 @@
-import { LockFilled } from '@ant-design/icons'
 import React, { Fragment } from 'react'
 import Dashboard from '../../../assets/dashboard.png'
 import secureKey from '../../../assets/security.png'

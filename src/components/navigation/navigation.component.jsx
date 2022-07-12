@@ -14,7 +14,7 @@ const CompanyDropdown = function ({ dropdownState }) {
     <div
       className={`${
         dropdownState ? "opacity-1" : "opacity-0"
-      } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown`}>
+      } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown `}>
       <Link
         to='/about'
         className='h-10 w-28 flex items-center justify-evenly bg-green-500 py-4 px-2 rounded-md mt-4'
@@ -95,6 +95,9 @@ const DropDownLink = function (props) {
 
 const Navigation = () => {
   const [nav, setNav] = useState(true);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [show, setShow] = useState(false);
+
   const handleClick = () => {
     setNav(!nav);
   };
@@ -102,13 +105,13 @@ const Navigation = () => {
     setNav(!nav);
   };
 
-  // handling mobile dropdown 
-  const [mobileDrop, setMobileDrop] = useState(true)
-  const handleMobileDrop =()=> setMobileDrop(!mobileDrop);
+  // handling mobile dropdown
+  const [mobileDrop, setMobileDrop] = useState(true);
+  const handleMobileDrop = () => setMobileDrop(!mobileDrop);
 
   //second mobile dropdown
-  const [mobileDrop1, setMobileDrop1] = useState(true)
-  const handleMobileDrop1 =()=> setMobileDrop1(!mobileDrop1);
+  const [mobileDrop1, setMobileDrop1] = useState(true);
+  const handleMobileDrop1 = () => setMobileDrop1(!mobileDrop1);
 
   return (
     <Fragment>
@@ -122,7 +125,9 @@ const Navigation = () => {
             </Link>
             <div className='lg:hidden' onClick={handleClick}>
               {
-                nav ? <MenuIcon className='text-[#fff] w-7' /> : null
+                nav ? (
+                  <MenuIcon className='text-[#fff] w-7 cursor-pointer' />
+                ) : null
                 // <XIcon className='text-[#fff] w-7' />
               }
             </div>
@@ -133,29 +138,47 @@ const Navigation = () => {
                 <Link to='about'>Explore</Link>
               </li>
               <li>
-                <Link to='/' className='flex'>
-                  Individuals{" "}
-                  <span className='flex items-center justify-center'>
-                    <DownOutlined className='text-xs ml-1 ' />
+                <Link
+                  to='#'
+                  className='relative'
+                  id='individual'
+                  onClick={() => {
+                    setShowDropdown(!showDropdown);
+                    setShow(false);
+                  }}>
+                  Individuals
+                  <span>
+                    <DownOutlined className='text-xs ' />
                   </span>
                 </Link>
               </li>
+              <DropDownLink dropdownState={showDropdown} />
               <li>
                 <Link to='/'>Investors</Link>{" "}
               </li>
               <li>
-                <Link to='/' className='flex items-center'>
-                  Company{" "}
-                  <span className='flex justify-center items-center '>
-                    <DownOutlined className='text-xs ml-1' />
+                <Link
+                  to='#'
+                  // id='company'
+                  className='relative'
+                  onClick={(e) => {
+                    setShow(!show);
+                    setShowDropdown(false);
+                  }}>
+                  Company
+                  <span>
+                    <DownOutlined className='text-xs ' />
                   </span>
                 </Link>
+                <CompanyDropdown dropdownState={show} />
               </li>
             </ul>
           </div>
-          <button className='hidden lg:block  bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 rounded-full text-white'>
+          <Link
+            to='/download'
+            className='hidden lg:block  bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 rounded-full text-white'>
             DOWNLOAD
-          </button>
+          </Link>
         </div>
         <div
           className={
@@ -164,7 +187,7 @@ const Navigation = () => {
               : "w-full h-screen top-0 translate-x-0 absolute z-[100000] flex lg:hidden bg-[#181e25] flex-col align-middle justify-center pt-2 transition ease-in-out duration-500"
           }>
           <XIcon
-            className='text-white w-7 absolute right-4 top-4'
+            className='text-white cursor-pointer w-7 absolute right-4 top-4'
             onClick={closeNav}
           />
           <ul className='flex flex-col h-full py-16 justify-between transition linear duration-300 items-center text-center px-6 '>
@@ -175,41 +198,53 @@ const Navigation = () => {
             </li>
 
             <li className='  py-2 my-2 w-full'>
-              <li className='flex items-center justify-center text-white' onClick={ handleMobileDrop }>
-                Individuals <DownOutlined className='text-xs ml-1'  />
+              <li
+                className='flex items-center justify-center text-white'
+                onClick={handleMobileDrop}>
+                Individuals <DownOutlined className='text-xs ml-1' />
               </li>
-              <div className={mobileDrop? 'hidden':'mt-4 border border-[#c4c4c4] py-2'}>
-                <li className="mb-3">
-                  <Link to='/' >Buy and Sell</Link>
+              <div
+                className={
+                  mobileDrop ? "hidden" : "mt-4 border border-[#c4c4c4] py-2"
+                }>
+                <li className='mb-3'>
+                  <Link to='/'>Buy and Sell</Link>
                 </li>
                 <li>
-                  <Link to='/' >Mooncod Wallet</Link>
+                  <Link to='/'>Mooncod Wallet</Link>
                 </li>
               </div>
             </li>
-            
 
             <li className=' py-2 my-2 w-full'>
               <Link to='/'>Investors</Link>{" "}
             </li>
 
             <li className='py-2 mt-2 w-full'>
-              <Link to='/' className='flex items-center justify-center' onClick={handleMobileDrop1}>
+              <Link
+                to='/'
+                className='flex items-center justify-center'
+                onClick={handleMobileDrop1}>
                 Company <DownOutlined className='text-xs ml-1' />
               </Link>
-              <div className={mobileDrop1? 'hidden':'mt-4 border border-[#c4c4c4] py-2'}>
-                <li className="mb-3">
-                  <Link to='/' >About</Link>
+              <div
+                className={
+                  mobileDrop1 ? "hidden" : "mt-4 border border-[#c4c4c4] py-2"
+                }>
+                <li className='mb-3'>
+                  <Link to='/'>About</Link>
                 </li>
                 <li>
-                  <Link to='/' >FAQ</Link>
+                  <Link to='/'>FAQ</Link>
                 </li>
               </div>
             </li>
           </ul>
-          <button className='h-auto bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 text-white transition linear duration-300  w-full'>
+          <Link
+            to='/download'
+            className='h-auto bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 text-white transition linear duration-300  w-full'>
             DOWNLOAD
-          </button>
+          </Link>
         </div>
       </div>
 
