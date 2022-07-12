@@ -94,7 +94,7 @@ const Faq = function () {
             <div
               className='w-4/5 lg:w-1/2 h-14 mx-auto flex justify-between items-center px-6 rounded-lg outline outline-1 outline-offset-1 bg-[#080A0C] outline-[#3D8DFF] open mt-1'
               onClick={() => onAccordionOpen(index)}>
-              <h2 className='text-sm md:text-md md:text-lg text-white'>
+              <h2 className='text-xs md:text-md md:text-lg text-white'>
                 {question.headline}
               </h2>
               <PlusOutlined className='text-[#454545] cursor-pointer icon' />
@@ -128,7 +128,7 @@ const Faq = function () {
       <Navigation />
 
       <section className='container h-full md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
-        <div className='w-full pb-4 md:mb-0 mt-20'>
+        <div className='w-full pb-4 md:mb-0 mt-20 mt-32 '>
           <div>
             <h1 className='text-lg mb-4 font-body text-center font-bold text-white'>
               FAQs
@@ -137,13 +137,13 @@ const Faq = function () {
               Frequently asked questions
             </h2>
             <p className='text-sm mt-4 font-body text-center font-normal text-white'>
-              Have questions? We are here to answer.
+              Have questions? <br /> We are here to answer.
             </p>
           </div>
         </div>
 
-        <div className='w-full h-full relative py-4 '>
-          <div className='w-80 h-10 mx-auto bg[#080A0C] border border-1 border-white flex items-center justify-center rounded-lg px-1'>
+        <div className='w-full h-full relative py-4 px-4 '>
+          <div className='w-full md:w-80 h-10 mx-auto bg[#080A0C] border border-1 border-white flex items-center justify-center rounded-lg px-1'>
             <SearchOutlined
               className='text-[#fff] w-7'
               onClick={() => {

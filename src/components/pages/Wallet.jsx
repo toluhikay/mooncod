@@ -19,7 +19,7 @@ const Wallet = () => {
     <main>
       <Header>
         <div className='container md:px-16 xl:px-20 mx-auto h-full w-full flex items-center justify-center flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
-          <div className='w-full lg:w-3/5 pb-4 md:mb-0'>
+          <div className='w-full lg:w-3/5 pb-4 md:mb-0 mt-32'>
             <div>
               <h2 className='text-5xl lg:text-5xl xl:text-7xl mb-2 font-body font-bold text-white text-center lg:text-left'>
                 Mooncod Wallet
@@ -78,7 +78,7 @@ const Wallet = () => {
             />
 
             <button
-              className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-4 md:px-8 py-4 rounded-full text-white flex items-center justify-between fixed bottom-24 left-3/5 md:left-0 z-10'
+              className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-4 md:px-8 py-4 rounded-full text-white flex items-center justify-between fixed bottom-24 hidden md:left-0 z-10'
               style={{ left: "80%" }}>
               <img src={SMS} alt='appStore icon' className='mr-2' />
               {""}

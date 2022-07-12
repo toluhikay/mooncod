@@ -12,6 +12,7 @@ const HeroLand = () => {
   return (
     <Fragment>
         <Header>
+
         <div className="bg-cover bg-center bg-[url('/src/assets/heroBackground.png')] bg-[#080A0C] text-white ">
             <div className='h-full  flex flex-col justify-center items-center px-3 lg:px-32 lg:flex-row lg:justify-between pb-5 pt-7'>
                 <div className=' lg:w-1/2 mt-28 lg:h-[30rem] flex flex-col justify-evenly items-center lg:items-start lg:text-start text-center '>

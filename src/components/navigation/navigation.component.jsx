@@ -113,12 +113,12 @@ const Navigation = () => {
   return (
     <Fragment>
       <div
-        className='bg-[181e25] fixed w-full z-50'
+        className='bg-[181e25] fixed w-screen z-50'
         style={{ backdropFilter: "blur(85px)" }}>
-        <div className=' bg-[#181E25] bg-opacity-50 px-2 py-2 xl:px-32 lg:px-20 lg:py-6 flex justify-between items-center top-0 right-0'>
+        <div className='bg-[#181E25] bg-opacity-50 px-2 py-2 xl:px-32 lg:px-20 lg:py-6 flex justify-between items-center top-0 right-0'>
           <div className='flex justify-between w-full py-2 lg:py-0 lg:w-1/4'>
             <Link to='/' className=' text-red-700 '>
-              <img src={logo} alt='Mooncod' />
+              <img src={logo} alt='Mooncod' className='w-32 md:w-full' />
             </Link>
             <div className='lg:hidden' onClick={handleClick}>
               {
@@ -160,14 +160,14 @@ const Navigation = () => {
         <div
           className={
             nav
-              ? "h-screen absolute left-0 translate-x-[200rem] transition linear duration-300"
+              ? "absolute left-0 translate-x-[200rem] transition linear duration-300"
               : "w-full h-screen top-0 translate-x-0 absolute z-[100000] flex lg:hidden bg-[#181e25] flex-col align-middle justify-center pt-2 transition ease-in-out duration-500"
           }>
           <XIcon
             className='text-white w-7 absolute right-4 top-4'
             onClick={closeNav}
           />
-          <ul className='flex flex-col h-full py-16 justify-between transition linear duration-300 items-center text-center '>
+          <ul className='flex flex-col h-full py-16 justify-between transition linear duration-300 items-center text-center px-6 '>
             <li className=' py-2 my-2 w-full'>
               <Link to='about' onClick={closeNav}>
                 Explore

@@ -28,7 +28,7 @@ const Download = function () {
     <main>
       <Header>
         <div className='container md:px-16 xl:px-20 mx-auto pb-24 pt-6 h-full w-full flex items-center justify-center flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
-          <div className='w-full h-full lg:w-1/2 pb-4 md:mb-0 flex flex-col justify-between items-center'>
+          <div className='w-full h-full lg:w-1/2 pb-4 md:mb-0 flex flex-col justify-between items-center mt-32'>
             <div className='mx-auto'>
               <p className='lg:text-md xl:text-1xl lg:mt-0 font-body text-center font-base text-normal text-white'>
                 LATEST RELEASE: COMING SOON
@@ -67,7 +67,7 @@ const Download = function () {
           </div>
           <div className='h-[35rem] hidden lg:block w-px bg-white'></div>
           <div className='w-full lg:w-1/2 h-full mt-6 lg:mt-0 relative flex flex-col items-center justify-between'>
-            <div className=' mx-auto'>
+            <div className=' mx-auto mt-32'>
               <p className='lg:text-md xl:text-1xl mt-4 lg:mt-0 font-body text-center font-base text-normal text-white'>
                 LATEST RELEASE
               </p>
