@@ -9,6 +9,7 @@ import Download from "./components/pages/Download";
 import Faq from "./components/pages/faq";
 
 import { QueryClientProvider, QueryClient } from "react-query";
+import Explore from "./components/pages/Explore";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='about' element={<AboutUs />}></Route>
           <Route path='faq' element={<Faq />}></Route>
           <Route path='download' element={<Download />}></Route>
+          <Route path='explore' element={<Explore />}></Route>
         </Routes>
         <Footer />
       </div>

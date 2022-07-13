@@ -5,6 +5,7 @@ import phoneThree from '../../../assets/tradephone3.png'
 import appStore from '../../../assets/appStore.png'
 import playStore from '../../../assets/playStore.png'
 import bitcoinWallet from '../../../assets/bitcoinWallet.png'
+import { Link } from 'react-router-dom'
 
 const Manage = () => {
   return (
@@ -28,7 +29,7 @@ const Manage = () => {
                 <li className='md:text-base text-xs'>Industry-leading security and financial stability to keep your identity and funds safe and secure.</li>
               </ul>
               <div className='md:my-5 my-2'>
-                <button className='bg-gradient-to-r from-[#008AED] to-[#54F0D1] text-xs md:text-base md:py-3 py-2 px-10 md:px-14 rounded-full'>Download Wallet</button>
+                <Link to='/download' className='bg-gradient-to-r from-[#008AED] to-[#54F0D1] text-xs md:text-base md:py-3 py-2 px-10 md:px-14 rounded-full'>Download Wallet</Link>
               </div>
             </div>
 
@@ -36,12 +37,12 @@ const Manage = () => {
               <div className='w-3/5 text-left'>
                 <p className='lg:text-5xl md:text-3xl sm:text-2xl text-xl font-bold'>Give more out of crypto with Mooncod</p>
                 <div className='flex mt-7'>
-                    <a href="" className='bg-black p-2 rounded-md'>
+                    <Link to="/download" className='bg-black p-2 rounded-md'>
                       <img src={appStore} alt="" />
-                    </a>
-                    <a href="" className='bg-black ml-4 p-2 rounded-md'>
+                    </Link>
+                    <Link to="/download" className='bg-black ml-4 p-2 rounded-md'>
                       <img src={playStore} alt="" />
-                    </a>
+                    </Link>
                 </div>
               </div>
               <div className='static'>

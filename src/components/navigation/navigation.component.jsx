@@ -135,12 +135,17 @@ const Navigation = () => {
           <div className='hidden lg:flex w-2/4 align-middle justify-center py-2'>
             <ul className='flex w-full justify-between items-center '>
               <li>
-                <Link to='about'>Explore</Link>
+                <Link
+                  to='about'
+                  className='hover:text-[#008AED] active:[#008AED
+] transition ease duration-300'>
+                  Explore
+                </Link>
               </li>
               <li>
                 <Link
                   to='#'
-                  className='relative'
+                  className='relative hover:text-[#008AED] active:text-[#008AED]'
                   id='individual'
                   onClick={() => {
                     setShowDropdown(!showDropdown);
@@ -154,13 +159,18 @@ const Navigation = () => {
               </li>
               <DropDownLink dropdownState={showDropdown} />
               <li>
-                <Link to='/'>Investors</Link>{" "}
+                <Link
+                  to='/'
+                  className='hover:text-[#008AED] active:[#008AED
+] transition ease duration-300'>
+                  Investors
+                </Link>{" "}
               </li>
               <li>
                 <Link
                   to='#'
                   // id='company'
-                  className='relative'
+                  className='relative hover:text-[#008AED] active:text-[#008AED]'
                   onClick={(e) => {
                     setShow(!show);
                     setShowDropdown(false);
@@ -190,61 +200,90 @@ const Navigation = () => {
             className='text-white cursor-pointer w-7 absolute right-4 top-4'
             onClick={closeNav}
           />
-          <ul className='flex flex-col h-full py-16 justify-between transition linear duration-300 items-center text-center px-6 '>
+          <ul className='flex flex-col h-full py-16 justify-evenly transition linear duration-300 items-center text-center px-6 '>
             <li className=' py-2 my-2 w-full'>
-              <Link to='about' onClick={closeNav}>
+              <Link
+                to='about'
+                className='hover:text-[#008AED] active:[#008AED
+] transition ease duration-300'
+                onClick={closeNav}>
                 Explore
               </Link>
             </li>
 
-            <li className='  py-2 my-2 w-full'>
+            <li className='py-2 my-2 w-full'>
               <li
-                className='flex items-center justify-center text-white'
+                className='flex items-center justify-center text-white font-bold cursor-pointer text-center hover:text-[#008AED] active:text-[#008AED]'
                 onClick={handleMobileDrop}>
                 Individuals <DownOutlined className='text-xs ml-1' />
               </li>
               <div
                 className={
-                  mobileDrop ? "hidden" : "mt-4 border border-[#c4c4c4] py-2"
+                  mobileDrop
+                    ? "hidden"
+                    : " transition ease-out duration-300 mt-4 py-6 rounded-l"
                 }>
                 <li className='mb-3'>
-                  <Link to='/'>Buy and Sell</Link>
+                  <Link
+                    to='/'
+                    className='block py-3 w-full hover:bg-[#008AED] hover:shadow-lg  transition ease duration-300'>
+                    Buy and Sell
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/'>Mooncod Wallet</Link>
+                  <Link
+                    to='/wallet'
+                    className='block py-3 w-full hover:bg-[#008AED] hover:shadow-lg  transition ease duration-300'>
+                    Mooncod Wallet
+                  </Link>
                 </li>
               </div>
             </li>
 
             <li className=' py-2 my-2 w-full'>
-              <Link to='/'>Investors</Link>{" "}
+              <Link
+                to='/'
+                className='hover:text-[#008AED] active:[#008AED
+] transition ease duration-300'>
+                Investors
+              </Link>{" "}
             </li>
 
             <li className='py-2 mt-2 w-full'>
-              <Link
+              <li
                 to='/'
-                className='flex items-center justify-center'
+                className='flex items-center justify-center text-white font-bold cursor-pointer hover:text-[#008AED] active:text-[#008AED]'
                 onClick={handleMobileDrop1}>
                 Company <DownOutlined className='text-xs ml-1' />
-              </Link>
+              </li>
               <div
                 className={
-                  mobileDrop1 ? "hidden" : "mt-4 border border-[#c4c4c4] py-2"
+                  mobileDrop1
+                    ? "hidden"
+                    : "transition ease-out duration-300 mt-4 py-6 rounded-l"
                 }>
                 <li className='mb-3'>
-                  <Link to='/'>About</Link>
+                  <Link
+                    to='/about'
+                    className='block py-3 w-full hover:bg-[#008AED] hover:sext-black transition ease duration-300'>
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/'>FAQ</Link>
+                  <Link
+                    to='/faq'
+                    className='block py-3 w-full hover:bg-[#008AED] hover:text-black transition ease duration-300'>
+                    FAQ
+                  </Link>
                 </li>
               </div>
             </li>
+            <Link
+              to='/download'
+              className='lg:hidden bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-4 rounded-full text-white w-64 mx-auto text-center '>
+              DOWNLOAD
+            </Link>
           </ul>
-          <Link
-            to='/download'
-            className='h-auto bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 text-white transition linear duration-300  w-full'>
-            DOWNLOAD
-          </Link>
         </div>
       </div>
 
