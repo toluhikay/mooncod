@@ -193,7 +193,7 @@ const Wallet = () => {
         </article>
       </section>
 
-      <section class='h-full' id='explorer'>
+      <section className='h-full' id='explorer'>
         <div className='container mx-auto'>
           <div className='pt-32'>
             <PageHeader

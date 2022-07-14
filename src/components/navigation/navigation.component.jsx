@@ -136,7 +136,7 @@ const Navigation = () => {
             <ul className='flex w-full justify-between items-center '>
               <li>
                 <Link
-                  to='about'
+                  to='/explore'
                   className='hover:text-[#008AED] active:[#008AED
 ] transition ease duration-300'>
                   Explore
@@ -203,7 +203,7 @@ const Navigation = () => {
           <ul className='flex flex-col h-full py-16 justify-evenly transition linear duration-300 items-center text-center px-6 '>
             <li className=' py-2 my-2 w-full'>
               <Link
-                to='about'
+                to='/explore'
                 className='hover:text-[#008AED] active:[#008AED
 ] transition ease duration-300'
                 onClick={closeNav}>
@@ -212,32 +212,32 @@ const Navigation = () => {
             </li>
 
             <li className='py-2 my-2 w-full'>
-              <li
+              <span
                 className='flex items-center justify-center text-white font-bold cursor-pointer text-center hover:text-[#008AED] active:text-[#008AED]'
                 onClick={handleMobileDrop}>
                 Individuals <DownOutlined className='text-xs ml-1' />
-              </li>
-              <div
+              </span>
+              <span
                 className={
                   mobileDrop
                     ? "hidden"
                     : " transition ease-out duration-300 mt-4 py-6 rounded-l"
                 }>
-                <li className='mb-3'>
+                <span className='block mb-3'>
                   <Link
                     to='/'
                     className='block py-3 w-full hover:bg-[#008AED] hover:shadow-lg  transition ease duration-300'>
                     Buy and Sell
                   </Link>
-                </li>
-                <li>
+                </span>
+                <span className='block'>
                   <Link
                     to='/wallet'
                     className='block py-3 w-full hover:bg-[#008AED] hover:shadow-lg  transition ease duration-300'>
                     Mooncod Wallet
                   </Link>
-                </li>
-              </div>
+                </span>
+              </span>
             </li>
 
             <li className=' py-2 my-2 w-full'>
@@ -249,35 +249,35 @@ const Navigation = () => {
               </Link>{" "}
             </li>
 
-            <li className='py-2 mt-2 w-full'>
+            <ul className='py-2 mt-2 w-full'>
               <li
                 to='/'
                 className='flex items-center justify-center text-white font-bold cursor-pointer hover:text-[#008AED] active:text-[#008AED]'
                 onClick={handleMobileDrop1}>
                 Company <DownOutlined className='text-xs ml-1' />
               </li>
-              <div
+              <li
                 className={
                   mobileDrop1
                     ? "hidden"
                     : "transition ease-out duration-300 mt-4 py-6 rounded-l"
                 }>
-                <li className='mb-3'>
+                <span className='block mb-3'>
                   <Link
                     to='/about'
                     className='block py-3 w-full hover:bg-[#008AED] hover:sext-black transition ease duration-300'>
                     About
                   </Link>
-                </li>
-                <li>
+                </span>
+                <span className='block'>
                   <Link
                     to='/faq'
                     className='block py-3 w-full hover:bg-[#008AED] hover:text-black transition ease duration-300'>
                     FAQ
                   </Link>
-                </li>
-              </div>
-            </li>
+                </span>
+              </li>
+            </ul>
             <Link
               to='/download'
               className='lg:hidden bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-4 rounded-full text-white w-64 mx-auto text-center '>

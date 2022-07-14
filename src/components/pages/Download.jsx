@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Header from "./Header";
 import Mac from "../../assets/macbook.png";
 import Phones from "../../assets/doublePhones.png";

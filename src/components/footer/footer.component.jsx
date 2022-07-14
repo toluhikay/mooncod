@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logomoon.png'
-import {GithubOutlined, GoogleOutlined, LinkedinFilled, FacebookOutlined, RedditCircleFilled, SlackOutlined, TwitterOutlined, InstagramOutlined} from '@ant-design/icons'
+import { FacebookOutlined, RedditCircleFilled, TwitterOutlined, InstagramOutlined} from '@ant-design/icons'
 // import Telegram from '../../assets/telegram.svg'
 
 const Footer = () => {

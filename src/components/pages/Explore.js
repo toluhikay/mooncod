@@ -1,20 +1,20 @@
-import React, { useState, useRef, useEffect, Fragment } from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 // import Chart from "chart.js/auto";
-import { getRelativePosition } from "chart.js/helpers";
-import { Line } from "react-chartjs-2";
+// import { getRelativePosition } from "chart.js/helpers";
+// import { Line } from "react-chartjs-2";
 
 import Navigation from "../navigation/navigation.component";
 import PreFooter from "./PreFooter";
 import SMS from "../../assets/sms.png";
 import { SearchOutlined, ArrowRightOutlined } from "@ant-design/icons";
-import { PrinterIcon } from "@heroicons/react/outline";
+// import { PrinterIcon } from "@heroicons/react/outline";
 import Chart from "../../assets/chart.png";
 
 const Explore = () => {
   const [page, setPage] = useState(1);
-  const [id, setId] = useState([]);
+  //   const [id, setId] = useState([]);
 
   //   const canva = useRef();
 
@@ -26,29 +26,29 @@ const Explore = () => {
     return response.json();
   };
 
-  function getId(data) {
-    return data.map((cur) => cur);
-  }
+  //   function getId(data) {
+  //     return data.map((cur) => cur);
+  //   }
 
-  const coinChart = async () => {
-    const response = await fetch(
-      //   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&page=${page}&sparkline=false`
-      `https://api.coingecko.com/api/v3/coins/${getId(
-        id
-      )}/market_chart?vs_currency=usd&days=1`
-    );
-    return response.json();
-  };
+  //   const coinChart = async () => {
+  //     const response = await fetch(
+  //       //   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&page=${page}&sparkline=false`
+  //       `https://api.coingecko.com/api/v3/coins/${getId(
+  //         id
+  //       )}/market_chart?vs_currency=usd&days=1`
+  //     );
+  //     return response.json();
+  //   };
 
   const { data = [], status } = useQuery("data_market_prices", coinMarkets);
 
   const Loader = () => {
     return (
-      <div class='flex justify-center items-center'>
+      <div className='flex justify-center items-center'>
         <div
-          class='spinner-border border-t-[#3D8DFF] border-r-red-[#3D8DFF] border-l-red-[#3D8DFF]  animate-spin inline-block w-8 h-8 border-4 rounded-full'
+          className='spinner-border border-t-[#3D8DFF] border-r-red-[#3D8DFF] border-l-red-[#3D8DFF]  animate-spin inline-block w-8 h-8 border-4 rounded-full'
           role='status'>
-          <span class='visually-hidden'></span>
+          <span className='visually-hidden'></span>
         </div>
       </div>
     );
@@ -56,7 +56,7 @@ const Explore = () => {
 
   const Error = ({ error }) => {
     return (
-      <div class='flex justify-center items-center'>
+      <div className='flex justify-center items-center'>
         <p className='text-red-700 text-center'>{error}</p>
       </div>
     );
@@ -75,9 +75,9 @@ const Explore = () => {
   //     }
   //   )
 
-  useEffect(() => {
-    setId((i) => data.map((coin) => coin.id));
-  }, [data]);
+  //   useEffect(() => {
+  //     setId((i) => data.map((coin) => coin.id));
+  //   }, [data]);
 
   //   const { data: prices, status: success } = useQuery(
   //     "coin_market_prices",
@@ -87,9 +87,9 @@ const Explore = () => {
   //     }
   //   );
 
-  function convertToMint(data) {
-    return new Date(data);
-  }
+  //   function convertToMint(data) {
+  //     return new Date(data);
+  //   }
 
   //   const lineChart = () => {
   //     const data = {
@@ -217,7 +217,6 @@ const Explore = () => {
   return (
     <main id='faq'>
       <Navigation />
-      {console.log(id)}
       <section className='container h-full md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
         <div className='w-full pb-4 md:mb-0 mt-20 mt-48 '>
           <div>

@@ -1,15 +1,15 @@
-import { ArrowRightOutlined, CaretRightOutlined, DollarCircleFilled, DownOutlined, } from '@ant-design/icons'
+import { ArrowRightOutlined, CaretRightOutlined } from '@ant-design/icons'
 import React, { Fragment } from 'react'
 import IphoneOne from '../../../assets/heroImage.png'
 import {RefreshIcon, ChatAltIcon} from '@heroicons/react/solid'
-import { useQuery } from 'react-query'
+// import { useQuery } from 'react-query'
 import Header from '../../pages/Header'
 import Input from './input.component'
 import { Link } from 'react-router-dom'
 
 const HeroLand = () => {
 
-    const {data, status} = useQuery
+    // const {data, status} = useQuery
   return (
     <Fragment>
         <Header>
