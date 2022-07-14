@@ -92,7 +92,7 @@ const Footer = () => {
             <img src={logo} alt=""  className=' md:border-r-2 border-[#fff] pr-8 '/>
             <p className='text-white md:text-base sm:text-sm text-xs sm:pt-0 pt-4'>© <span>{year}</span> Moncod - All Rights Reserved</p>
           </div>
-          <div className='text-white w-1/3 flex justify-between'>
+          <div className='text-white w-1/3 flex justify-between items-center'>
             <a href="https://www.facebook.com/moodcod452" target={'_blank'} rel="noreferrer">
             <FacebookOutlined/>
             </a>
