@@ -7,6 +7,7 @@ import Wallet from "./components/pages/Wallet";
 import AboutUs from "./components/pages/AboutUs";
 import Download from "./components/pages/Download";
 import Faq from "./components/pages/faq";
+import ScrollToTop from "./scroll";
 
 import { QueryClientProvider, QueryClient } from "react-query";
 import Explore from "./components/pages/Explore";
@@ -17,16 +18,18 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
-        <Routes>
-          {/* <Route path='/' element={<Navigation />}> */}
-          <Route path='/' element={<Navigation />}></Route>
-          <Route index element={<DirectoryLand />}></Route>
-          <Route path='wallet' element={<Wallet />}></Route>
-          <Route path='about' element={<AboutUs />}></Route>
-          <Route path='faq' element={<Faq />}></Route>
-          <Route path='download' element={<Download />}></Route>
-          <Route path='explore' element={<Explore />}></Route>
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            {/* <Route path='/' element={<Navigation />}> */}
+            <Route path='/' element={<Navigation />}></Route>
+            <Route index element={<DirectoryLand />}></Route>
+            <Route path='wallet' element={<Wallet />}></Route>
+            <Route path='about' element={<AboutUs />}></Route>
+            <Route path='faq' element={<Faq />}></Route>
+            <Route path='download' element={<Download />}></Route>
+            <Route path='explore' element={<Explore />}></Route>
+          </Routes>
+        </ScrollToTop>
         <Footer />
       </div>
     </QueryClientProvider>

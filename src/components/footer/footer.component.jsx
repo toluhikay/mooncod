@@ -19,7 +19,7 @@ const Footer = () => {
             <div>
               <ul>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >About Moncod</Link>
+                  <Link to='about' className='md:text-base text-xs text-[#DAE0E7] font-medium' >About Moncod</Link>
                 </li>
                 <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Affiliate</Link>
@@ -41,10 +41,10 @@ const Footer = () => {
             <div>
               <ul>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Desktop Wallet</Link>
+                  <Link to='wallet' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Desktop Wallet</Link>
                 </li>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Mobile Wallet</Link>
+                  <Link to='wallet' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Mobile Wallet</Link>
                 </li>
                 <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Careers</Link>
