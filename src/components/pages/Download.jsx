@@ -51,11 +51,11 @@ const Download = function () {
             </div>
 
             <div className='w-full flex justify-center items-center'>
-              <p className='text-sm font-thin text-white'>Version History</p>
+              <p className='text-sm font-thin text-white text-center'>Version History</p>
               <span className='block w-px h-4 bg-white mx-2'></span>
-              <p className='text-sm font-thin text-white'>Release Hashes</p>
+              <p className='text-sm font-thin text-center text-white'>Release Hashes</p>
               <span className='block w-px h-4 bg-white mx-2'></span>
-              <Link to={"/"} className='text-sm font-thin text-white'>
+              <Link to={"/"} className='text-sm font-thin text-center text-white'>
                 Terms and Conditions
               </Link>
             </div>

@@ -72,6 +72,12 @@ header{
   background-position: center;
   background-size: cover;
 }
+#explore{
+  background-color: #080A0C;
+  background-image: url(../src/assets/explore.png);
+  background-position: center;
+  background-size: cover;
+}
 
 
 .open,.icon {
