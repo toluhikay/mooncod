@@ -6,6 +6,21 @@
   a{
     @apply text-[#fff] text-base font-bold  
   }
+  table{
+    @apply text-base w-full flex flex-col justify-between 
+  }
+  tr{
+    @apply w-auto flex justify-between
+  }
+  td, th {
+    @apply w-1/4 border border-[#c4c4c4] flex justify-center items-center p-3 border-collapse
+  }
+  td{
+    @apply text-sm
+  }
+  th{
+    @apply  font-extrabold
+  }
 }
 @layer base{
   html{

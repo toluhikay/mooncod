@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logomoon.png'
-import { FacebookOutlined, RedditCircleFilled, TwitterOutlined, InstagramOutlined} from '@ant-design/icons'
+import { FacebookOutlined, RedditCircleFilled, TwitterOutlined, InstagramOutlined,} from '@ant-design/icons'
+import {FaTelegram} from 'react-icons/fa'
 // import Telegram from '../../assets/telegram.svg'
 
 const Footer = () => {
@@ -31,7 +32,7 @@ const Footer = () => {
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Digital Asset Disclosures</Link>
                 </li>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal & Privacy</Link>
+                  <Link to='legalPolicy' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal & Privacy</Link>
                 </li>
               </ul>
             </div>
@@ -45,9 +46,6 @@ const Footer = () => {
                 </li>
                 <li className='mb-4'>
                   <Link to='wallet' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Mobile Wallet</Link>
-                </li>
-                <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Careers</Link>
                 </li>
               </ul>
             </div>
@@ -66,7 +64,7 @@ const Footer = () => {
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Status</Link>
                 </li>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Careers</Link>
+                  <Link to='terms' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Terms and Conditions</Link>
                 </li>
                 <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Enquires and Sponsorship</Link>
@@ -106,8 +104,7 @@ const Footer = () => {
               <InstagramOutlined/>
             </a>
             <a href="https://t.me/mooncod" target={'_blank'} rel="noreferrer">
-              {/* <Telegram/>s */}
-              {/* <Telegram/> */}
+             <FaTelegram/>
             </a>
 
             {/* <GithubOutlined/> */}
