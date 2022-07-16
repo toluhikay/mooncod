@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "./Header";
+import {Helmet} from 'react-helmet-async'
 import PageHeader from "./PageHeader";
 import PreFooter from "./PreFooter";
 import PlayStore from "../../assets/playStore.png";
 import AppStore from "../../assets/appStore.png";
 import Phones from "../../assets/overlayingPhone.png";
-import SMS from "../../assets/sms.png";
+// import SMS from "../../assets/sms.png";
 import Control from "../../assets/control.png";
 import Store from "../../assets/store.png";
 import Security from "../../assets/security.png";
@@ -13,9 +14,19 @@ import Work from "../../assets/work.png";
 import Icons from "../../assets/cryptoIcons.png";
 import Mobile from "../../assets/cryptoMobile.png";
 import TwinMobile from "../../assets/twinMobile.png";
+import Help from "./Help";
 
 const Wallet = () => {
   return (
+    <>
+    <Helmet>
+        <title>Mooncod Bitcoin and Crypto Wallet</title>
+        <meta
+          name='description'
+          content=' Mooncod offers the most secure wallet to explore the world 0f cryptocurrencies. Manage, swap and trade tokens from Web or Mobile'
+        />
+        <link rel='canonical' href='/wallet' />
+      </Helmet>
     <main>
       <Header>
         <div className='container md:px-16 xl:px-20 mx-auto h-full w-full flex items-center justify-center flex-wrap lg:flex-nowrap sm:mt-8 md:mt-0'>
@@ -25,7 +36,7 @@ const Wallet = () => {
                 Mooncod Wallet
               </h2>
               <p className='lg:text-l xl:text-2xl mt-4 lg:mt-0 font-body text-center lg:text-left font-medium text-white'>
-              Mooncod offers the most secure wallet to explore the world 0f cryptocurrencies. <br/>s Manage, swap and trade tokens from Web or Mobile
+              Mooncod offers the most secure wallet to explore the world 0f cryptocurrencies. <br/> Manage, swap and trade tokens from Web or Mobile
               </p>
             </div>
 
@@ -75,13 +86,7 @@ const Wallet = () => {
               loading='lazy'
             />
 
-            <button
-              className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-4 md:px-8 py-4 rounded-full text-white flex items-center justify-between fixed bottom-24 hidden md:left-0 z-10'
-              style={{ left: "80%" }}>
-              <img src={SMS} alt='appStore icon' className='mr-2' />
-              {""}
-              Help
-            </button>
+<Help />
           </div>
         </div>
       </Header>
@@ -243,6 +248,7 @@ const Wallet = () => {
       </section>
       <PreFooter />
     </main>
+    </>
   );
 };
 

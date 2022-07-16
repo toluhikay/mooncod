@@ -14,7 +14,7 @@ const CompanyDropdown = function ({ dropdownState }) {
     <div
       className={`${
         dropdownState ? "opacity-1" : "opacity-0"
-      } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown `}>
+      } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown`}>
       <Link
         to='/about'
         className='h-10 w-28 flex items-center justify-evenly bg-green-500 py-4 px-2 rounded-md mt-4'
@@ -79,6 +79,19 @@ const DropDownLink = function (props) {
   );
 };
 
+// const Navigation = () => {
+//   const [nav, setNav] = useState(true);
+//   const [showDropdown, setShowDropdown] = useState(false);
+//   const [show, setShow] = useState(false);
+// >>>>>>> otherPages
+
+// export default Navigation;
+
+// import React, {Fragment, useState} from 'react'
+// import { Outlet, Link } from 'react-router-dom'
+// import {DownOutlined} from '@ant-design/icons'
+// import logo from '../../assets/logomoon.png'
+// import {MenuIcon, XIcon} from '@heroicons/react/outline'
 
 const Navigation = () => {
   const [nav, setNav] = useState(true);
@@ -103,11 +116,11 @@ const Navigation = () => {
   return (
     <Fragment>
       <div
-        className='bg-red fixed w-screen z-50'
+        className='bg-[181e25] fixed w-screen z-50'
         style={{ backdropFilter: "blur(85px)" }}
         onMouseLeave={() => {
           setShow(false);
-          setShowDropdown(false);
+          setShowDropdown(false)
         }}>
         <div className='bg-[#181E25] bg-opacity-50 px-2 py-2 xl:px-32 lg:px-20 lg:py-6 flex justify-between items-center top-0 right-0'>
           <div className='flex justify-between w-full py-2 lg:py-0 lg:w-1/4'>
@@ -140,7 +153,9 @@ const Navigation = () => {
                   onMouseEnter={() => {
                     setShowDropdown(!showDropdown);
                     setShow(false);
-                  }}>
+                  }}
+                 
+                  >
                   Individuals
                   <span>
                     <DownOutlined className='text-xs ' />
@@ -164,7 +179,8 @@ const Navigation = () => {
                   onMouseEnter={(e) => {
                     setShow(!show);
                     setShowDropdown(false);
-                  }}>
+                  }}
+                >
                   Company
                   <span>
                     <DownOutlined className='text-xs ' />

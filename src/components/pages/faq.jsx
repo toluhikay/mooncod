@@ -1,10 +1,11 @@
 import React, { Fragment, useState, useRef } from "react";
-import SMS from "../../assets/sms.png";
+import {Helmet} from 'react-helmet-async'
 import Navigation from "../navigation/navigation.component";
 import { SearchOutlined } from "@ant-design/icons";
 import { PlusOutlined } from "@ant-design/icons";
 import { MinusOutlined } from "@ant-design/icons";
 import PreFooter from "./PreFooter";
+import Help from "./Help";
 
 const questions = [
   {
@@ -124,6 +125,16 @@ const Faq = function () {
   //   const onOpen
 
   return (
+    <>
+
+<Helmet>
+        <title>Mooncod Frequently asked question</title>
+        <meta
+          name='description'
+          content='Frequently asked questions'
+        />
+        <link rel='canonical' href='/faq' />
+      </Helmet>
     <main id='faq'>
       <Navigation />
 
@@ -166,13 +177,7 @@ const Faq = function () {
               ref={val}
             />
           </div>
-          <button
-            className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-8 py-4 rounded-full text-white flex items-center justify-between fixed bottom-24 z-10'
-            style={{ left: "85%" }}>
-            <img src={SMS} alt='appStore icon' className='mr-2' />
-            {""}
-            Help
-          </button>
+          <Help />
         </div>
       </section>
       <section>
@@ -194,6 +199,8 @@ const Faq = function () {
       </section>
       <PreFooter />
     </main>
+    </>
+
   );
 };
 

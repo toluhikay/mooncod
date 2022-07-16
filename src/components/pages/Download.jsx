@@ -4,10 +4,10 @@ import Mac from "../../assets/macbook.png";
 import Phones from "../../assets/doublePhones.png";
 import PlayStore from "../../assets/playStore.png";
 import AppStore from "../../assets/appStore.png";
-import SMS from "../../assets/sms.png";
 import PreFooter from "./PreFooter";
 import { Link } from "react-router-dom";
 import { StarFilled } from "@ant-design/icons";
+import Help from "./Help";
 
 export const StarComponent = function (props) {
   return (
@@ -115,13 +115,7 @@ const Download = function () {
               </div>
             </div>
 
-            <button
-              className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-4 md:px-8 py-4 rounded-full text-white flex items-center justify-between fixed bottom-24 left-3/5 md:left-0 z-10'
-              style={{ left: "80%" }}>
-              <img src={SMS} alt='appStore icon' className='mr-2' />
-              {""}
-              Help
-            </button>
+            <Help />
           </div>
         </div>
       </Header>
