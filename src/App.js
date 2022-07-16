@@ -6,10 +6,13 @@ import Footer from "./components/footer/footer.component";
 import Wallet from "./components/pages/Wallet";
 import AboutUs from "./components/pages/AboutUs";
 import Download from "./components/pages/Download";
+import LegalPolicy from "./components/footer/footer pages/legalPolicy.footer";
 import Faq from "./components/pages/faq";
+// import Chart from "./components/pages/Chart";
 import ScrollToTop from "./scroll";
 
 import { QueryClientProvider, QueryClient } from "react-query";
+
 import Explore from "./components/pages/Explore";
 
 const queryClient = new QueryClient();
@@ -17,7 +20,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
+      <div className='overflow-hidden'>
         <ScrollToTop>
           <Routes>
             {/* <Route path='/' element={<Navigation />}> */}
@@ -28,6 +31,7 @@ function App() {
             <Route path='faq' element={<Faq />}></Route>
             <Route path='download' element={<Download />}></Route>
             <Route path='explore' element={<Explore />}></Route>
+            {/* <Route path='chart/:id' element={<Chart />}></Route> */}
           </Routes>
         </ScrollToTop>
         <Footer />

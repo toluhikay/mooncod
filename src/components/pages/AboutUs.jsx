@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import {Helmet} from 'react-helmet-async'
 
 import PreFooter from "./PreFooter";
 import Dashboard from "../../assets/dashboard.png";
@@ -31,9 +32,18 @@ export const DetailCard = function ({ children }) {
 
 const AboutUs = () => {
   return (
+    <>
+    <Helmet>
+      <title>About MoonCod Bitcoin and Crypto Wallet</title>
+    <meta
+      name="description"
+      content=" User-friendly crypto wallet with unique features that make your Web3 experience safe."
+    />
+<link rel='canonical' href='/about'/>
+    </Helmet>
     <main>
       <Header>
-        <div className='container h-full md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
+        <div className='container  md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
           <div className='w-full pb-4 md:mb-0 mt-36 lg:mt-40 '>
             <div>
               <h2 className='text-3xl lg:text-4xl xl:text-4xl  mb-2 font-body font-bold text-white text-center'>
@@ -391,6 +401,7 @@ const AboutUs = () => {
       </section>
       <PreFooter />
     </main>
+    </>
   );
 };
 

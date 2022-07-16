@@ -1,4 +1,4 @@
-import { ArrowRightOutlined, CaretRightOutlined, DollarCircleFilled, DownOutlined } from '@ant-design/icons'
+import { ArrowRightOutlined, CaretRightOutlined} from '@ant-design/icons'
 import React, { Fragment, useRef, useState } from 'react'
 import IphoneOne from '../../../assets/heroImage.png'
 import {RefreshIcon, ChatAltIcon} from '@heroicons/react/solid'
@@ -6,14 +6,15 @@ import { useQuery } from 'react-query'
 import Header from '../../pages/Header'
 // import Input from './input.component'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const HeroLand = () => {
 
     // const [coin, setCoinList] = useState("bitcoin");
-    const [currencyInputValue, setCurrencyInputValue] = useState('');
-    const [exchangeValue,setExchangeValue] =useState('')
+    const [currencyInputValue, setCurrencyInputValue] = useState('0');
+    const [exchangeValue,setExchangeValue] =useState(0)
 
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState(0)
 
 
 
@@ -22,13 +23,19 @@ const HeroLand = () => {
   const currencyValue = useRef();
 
     const coinData = async  () =>{
-        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false')
+        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
 
         return response.json()
     }
 
-    const {data,isLoading, isError, isSuccess} = useQuery('coin_list', coinData)
+    const {data, isSuccess} = useQuery('coin_list', coinData)
 
+
+    useEffect(()=> {
+if(isSuccess){
+  setValue(data[0].current_price)
+}
+    },[isSuccess,data])
     // const [value, setValue] = useState('2');
     /**
      *   ()=> {
@@ -96,7 +103,7 @@ const HeroLand = () => {
 
 
                     <div className='flex bg-gradient-to-r from-[#ffffff40] to-[#ffffff20] bg-opacity-40 py-5 px-8 rounded-full w-full md:w-[32%] mb-5 md:mb-0 justify-between items-center relative'>
-                        <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Get</p>
+                    <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Pay</p>
                         <input className='font-bold py-1 md:text-xl text-sm border-0 outline-0 bg-transparent'
                         type={'number'}
                         id='currency'
@@ -114,8 +121,9 @@ const HeroLand = () => {
 
 
                     <div className='flex bg-gradient-to-r from-[#ffffff40] to-[#ffffff20] bg-opacity-40 py-5 px-8 rounded-full w-full md:w-[32%] mb-5 md:mb-0 justify-between items-center relative'>
-                        <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Pay</p>
-                        <p className='font-bold md:text-xl text-sm'>{Number(exchangeValue).toFixed(5)}</p>
+                    <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Get</p>
+                       
+                        <p className='font-bold md:text-xl text-sm'>{exchangeValue.toFixed(5)}</p>
                         <div className='flex items-center pl-[5px] border-white border-l-2 w-1/3 justify-between'>
                         {/* <DollarCircleFilled className='text-[#008AED]'/> */}
                         {/* <p className='flex items-center md:text-base text-sm font-bold'>BTC<DownOutlined className="md:text-sm text-xs"/> </p> */}
