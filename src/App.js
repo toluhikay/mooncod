@@ -6,6 +6,7 @@ import Footer from "./components/footer/footer.component";
 import Wallet from "./components/pages/Wallet";
 import AboutUs from "./components/pages/AboutUs";
 import Download from "./components/pages/Download";
+import LegalPolicy from "./components/footer/footer pages/legalPolicy.footer";
 import Faq from "./components/pages/faq";
 // import Chart from "./components/pages/Chart";
 import ScrollToTop from "./scroll";
