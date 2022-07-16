@@ -1,28 +1,14 @@
 import React, { Fragment, useRef, useState } from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
-// import Chart from "chart.js/auto";
-// import { getRelativePosition } from "chart.js/helpers";
-// import { Line } from "react-chartjs-2";
 
 import Navigation from "../navigation/navigation.component";
 import PreFooter from "./PreFooter";
 import SMS from "../../assets/sms.png";
 import { SearchOutlined, ArrowRightOutlined } from "@ant-design/icons";
-// import { PrinterIcon } from "@heroicons/react/outline";
-import Chart from "../../assets/chart.png";
-//  const coinChart = async () => {
-//     const response = await fetch(
-//       //   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&page=${page}&sparkline=false`
-//       `https://api.coingecko.com/api/v3/coins/${getId(
-//         id
-//       )}/market_chart?vs_currency=usd&days=1`
-//     );
-//     return response.json();
-//   };
+
 const coinMarkets = async (page) => {
   const response = await fetch(
-    //   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&page=${page}&sparkline=false`
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${page}&sparkline=false`
   );
   return response.json();
@@ -30,9 +16,10 @@ const coinMarkets = async (page) => {
 
 export const useGetQuery = (searchvalue, page) => {
   const { data = [], status } = useQuery(
-    "data_market_prices",
+    ["data_market_prices", page],
     () => coinMarkets(page),
     {
+      keepPreviusData: true,
       select: (data_market_prices) =>
         data_market_prices.filter((coin) =>
           coin.name.toLowerCase().includes(searchvalue.toLowerCase())
@@ -47,7 +34,6 @@ const trending = async () => {
   const response = await fetch(
     "https://api.coingecko.com/api/v3/search/trending?limit=2"
   );
-  //   console.log(response.json());
   return response.json();
 };
 
@@ -74,6 +60,7 @@ export const Error = ({ error }) => {
 const Explore = () => {
   const [page, setPage] = useState(1);
   const [searchCoin, setSearchCoin] = useState("");
+  //   const navigate = useNavigate();
 
   let val = useRef();
 
@@ -81,88 +68,16 @@ const Explore = () => {
 
   const { data: coins, isSuccess } = useQuery("trend", trending);
 
+  function PrevPage() {
+    setPage((prev) => Math.max(prev - 1, 0));
+  }
   function nextPage() {
-    setPage(() => page + 1);
+    setPage((prev) => prev + 1);
   }
 
-  //   const { isIdle, data: projects } = useQuery(
-  //     ['projects', userId],
-  //     getProjectsByUser,
-  //     {
-  //       // The query will not execute until the userId exists
-  //       enabled: !!userId,
-  //     }
-  //   )
-
-  //   useEffect(() => {
-  //     setId((i) => data.map((coin) => coin.id));
-  //   }, [data]);
-
-  //   const { data: prices, status: success } = useQuery(
-  //     "coin_market_prices",
-  //     coinChart,
-  //     {
-  //       enabled: !!id,
-  //     }
-  //   );
-
-  //   function convertToMint(data) {
-  //     return new Date(data);
+  //   function onClick(id) {
+  //     console.log(navigate(`/chart/${id}`));
   //   }
-
-  //   const lineChart = () => {
-  //     const data = {
-  //       labels: prices.prices.map((time) => convertToMint(time[0])),
-  //       datasets: [
-  //         {
-  //           label: "",
-  //           data: prices.prices.map((data) => data[1]),
-  //           backgroundColor: "transpare
-  //           borderColor: "#008AED",
-  //           borderJoinStyle: "round",
-  //           borderCapStyle: "round",
-  //           borderWidth: 3,
-  //           pointRadius: 0,
-  //           pointHitRadius: 10,
-  //           lineTension: 0.2,
-  //         },
-  //       ],
-  //     };
-
-  //     const options = {
-  //       title: {
-  //         display: false,
-  //         text: "",
-  //         fontSize: 35,
-  //       },
-  //       legend: {
-  //         display: false,
-  //         position: "right",
-  //       },
-  //       //   layout: {
-  //       //     padding: {
-  //       //       left: 0,
-  //       //       right: 0,
-  //       //       top: 0,
-  //       //       bottom: 0,
-  //       //     },
-  //       //   },
-  //       scales: {
-  //         y: {
-  //           stacked: false,
-  //           display: false,
-  //         },
-  //         x: {
-  //           stacked: false,
-  //           display: false,
-  //         },
-  //       },
-  //     };
-
-  //     return (
-  //       <Fragment>{success && <Line data={data} options={options} />}</Fragment>
-  //     );
-  //   };
 
   const displayCoinData = () => {
     return data.map((coin) => {
@@ -173,13 +88,15 @@ const Explore = () => {
         price_change_percentage_24h,
         market_cap,
         image,
+        id,
       } = coin;
       return (
-        <tr className='border-b border-[#2B2C3B] ' key={coin.id}>
+        <tr className='border-b border-[#2B2C3B] ' key={id}>
           <td className='px-2 py-4 whitespace-nowrap text-sm font-bold text-white flex justify-start items-center'>
             <img
+              loading='lazy'
               src={image}
-              alt='btcimages'
+              alt=''
               className='w-[1.4rem] h-[1.4rem] mr-3 rounded-full'
             />
             {name.toUpperCase()}
@@ -203,14 +120,12 @@ const Explore = () => {
             {price_change_percentage_24h > 0 ? "+" : ""}
             {`${price_change_percentage_24h.toFixed(2)}%`}
           </td>
-          <td className='text-sm text-white font-light px-6 py-4 whitespace-nowrap'>
-            Chart
-          </td>
-          <td className='text-sm text-white font-light px-1 py-4 whitespace-nowrap'>
+
+          <td className='text-sm text-white font-light py-4 whitespace-nowrap'>
             <Link
               to={"download"}
-              className='flex items-center justify-center md:text-base text-[8px]'>
-              Trade Now <ArrowRightOutlined className='ml-4 text-[2s0px]' />
+              className='flex items-center justify-center md:text-base  text-[8px]'>
+              Trade Now <ArrowRightOutlined className='ml-4 text-[20px]' />
             </Link>
           </td>
         </tr>
@@ -253,11 +168,11 @@ const Explore = () => {
                     className='text-sm font-bold text-white py-4 text-left'>
                     Change
                   </th>
-                  <th
+                  {/* <th
                     scope='col'
-                    className='text-sm font-bold text-white px-6 py-4 text-left'>
+                    className='text-sm font-bold text-white px-6 py-4 text-left text-[#3D8DFF]'>
                     Chart
-                  </th>
+                  </th> */}
                   <th
                     scope='col'
                     className='text-sm font-bold text-white px-6 py-4 text-left'>
@@ -303,7 +218,7 @@ const Explore = () => {
   return (
     <main id='explore'>
       <Navigation />
-      <section className='container h-full md:px-16 xl:px-20 mx-auto w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0 '>
+      <section className='container h-full md:px-16 xl:px-20 mx-auto w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 md:mt-0 '>
         <div className='w-full pb-4 md:mb-0 mt-20 mt-48 '>
           <div>
             <h2 className='text-3xl lg:text-4xl xl:text-4xl mb-2 font-body font-bold text-white text-center'>
@@ -339,12 +254,27 @@ const Explore = () => {
       <section>
         <article className='container h-full mx-auto py-4'>
           <div className='h-full mt-14'>{showQustionList()}</div>
-          <div className='w-96 h-36 mx-auto flex justify-center items-center'>
+          <div className='w-full md:w-96 mx-auto py-4 mt-8 flex justify-center items-center'>
             <button
-              className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] px-11 py-3 rounded-full text-white'
-              onClick={nextPage}>
-              Load More
+              className='outline outline-[#008AED] text-[#008AED] px-11 py-3 rounded-l-full text-white'
+              onClick={PrevPage}
+              disabled={page === 1}>
+              Prev
             </button>
+            <button
+              className='bg-gradient-to-tr from-[#008AED] outline outline-[#008AED] to-[#54F0D1] px-11 py-3 rounded-r-full text-white'
+              onClick={nextPage}>
+              Next
+            </button>
+          </div>
+          {status === "fetching" && <Loader />}
+
+          <div className='mx-auto w-full mt-4 flex justify-center items-center'>
+            {status === "success" && (
+              <p className='text-white font-bold'>
+                Showing {(page - 1) * 100} - {page * 100} assets
+              </p>
+            )}
           </div>
         </article>
       </section>
@@ -352,7 +282,7 @@ const Explore = () => {
       <section className="bg-cover bg-center bg-[#080A0C] bg-[url('/src/assets/trend.png')]  ">
         <article className='container'>
           <div className='flex flex-wrap justify-evenly items-center w-full py-10 '>
-            <div className='flex flex-col justify-evenly flex-wrap mx-2 mb-4 rounded-2xl border-2 border-[#3D8DFF] w-[35.3rem] sm:h-auto h-auto px-7 py-3'>
+            <div className='flex flex-col justify-evenly flex-wrap mx-2 mb-4 rounded-2xl border-2 border-[#3D8DFF] w-full md:w-[35.3rem] sm:h-auto h-auto px-7 py-3'>
               {/* <img src={secureKey} alt="" /> */}
               <div>
                 <p className='text-xl font-bold text-white'>

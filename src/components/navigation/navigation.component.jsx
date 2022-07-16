@@ -79,19 +79,6 @@ const DropDownLink = function (props) {
   );
 };
 
-// const Navigation = () => {
-//   const [nav, setNav] = useState(true);
-//   const [showDropdown, setShowDropdown] = useState(false);
-//   const [show, setShow] = useState(false);
-// >>>>>>> otherPages
-
-// export default Navigation;
-
-// import React, {Fragment, useState} from 'react'
-// import { Outlet, Link } from 'react-router-dom'
-// import {DownOutlined} from '@ant-design/icons'
-// import logo from '../../assets/logomoon.png'
-// import {MenuIcon, XIcon} from '@heroicons/react/outline'
 
 const Navigation = () => {
   const [nav, setNav] = useState(true);
@@ -116,7 +103,7 @@ const Navigation = () => {
   return (
     <Fragment>
       <div
-        className='bg-[181e25] fixed w-screen z-50'
+        className='bg-red fixed w-screen z-50'
         style={{ backdropFilter: "blur(85px)" }}
         onMouseLeave={() => {
           setShow(false);

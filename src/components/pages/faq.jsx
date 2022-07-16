@@ -127,7 +127,7 @@ const Faq = function () {
     <main id='faq'>
       <Navigation />
 
-      <section className='container h-full md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
+      <section className='container h-full md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 md:mt-0'>
         <div className='w-full pb-4 md:mb-0 mt-20 mt-40 '>
           <div>
             

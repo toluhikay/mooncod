@@ -18,7 +18,7 @@ const Wallet = () => {
   return (
     <main>
       <Header>
-        <div className='container md:px-16 xl:px-20 mx-auto h-full w-full flex items-center justify-center flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
+        <div className='container md:px-16 xl:px-20 mx-auto h-full w-full flex items-center justify-center flex-wrap lg:flex-nowrap sm:mt-8 md:mt-0'>
           <div className='w-full lg:w-3/5 pb-4 md:mb-0 mt-32'>
             <div>
               <h2 className='text-5xl lg:text-5xl xl:text-7xl mb-2 font-body font-bold text-white text-center lg:text-left'>
