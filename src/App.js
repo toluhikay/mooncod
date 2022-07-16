@@ -14,6 +14,7 @@ import ScrollToTop from "./scroll";
 import { QueryClientProvider, QueryClient } from "react-query";
 
 import Explore from "./components/pages/Explore";
+import TermsConditions from "./components/footer/footer pages/termsCondition";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,8 @@ function App() {
             <Route path='faq' element={<Faq />}></Route>
             <Route path='download' element={<Download />}></Route>
             <Route path='explore' element={<Explore />}></Route>
-            {/* <Route path='chart/:id' element={<Chart />}></Route> */}
+            <Route path='polices' element={<LegalPolicy />}></Route>
+            <Route path='terms' element={<TermsConditions />}></Route>
           </Routes>
         </ScrollToTop>
         <Footer />

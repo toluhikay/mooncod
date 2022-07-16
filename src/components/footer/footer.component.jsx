@@ -16,23 +16,23 @@ const Footer = () => {
       <div className='px-3 bg-[#080A0C] md:px-32 '>
         <div className='bg-[#080A0C] text-white flex flex-col md:flex-row md:justify-between md:pt-24 pb-6 '>
           <div>
-            <p className=' md:text-lg font-medium mb-4 '>COMPANY</p>
+            <Link to='/faq' className=' md:text-lg font-medium mb-4 '>COMPANY</Link>
             <div>
               <ul>
                 <li className='mb-4'>
-                  <Link to='about' className='md:text-base text-xs text-[#DAE0E7] font-medium' >About Moncod</Link>
+                  <Link to='/about' className='md:text-base text-xs text-[#DAE0E7] font-medium' >About Moncod</Link>
                 </li>
-                <li className='mb-4'>
+                {/* <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Affiliate</Link>
                 </li>
                 <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Blog</Link>
+                </li> */}
+                <li className='mb-4'>
+                  {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Digital Asset Disclosures</Link> */}
                 </li>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Digital Asset Disclosures</Link>
-                </li>
-                <li className='mb-4'>
-                  <Link to='legalPolicy' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal & Privacy</Link>
+                  <Link to='/policy' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal & Privacy</Link>
                 </li>
               </ul>
             </div>
@@ -42,32 +42,32 @@ const Footer = () => {
             <div>
               <ul>
                 <li className='mb-4'>
-                  <Link to='wallet' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Desktop Wallet</Link>
+                  <Link to='download' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Desktop Wallet</Link>
                 </li>
                 <li className='mb-4'>
-                  <Link to='wallet' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Mobile Wallet</Link>
+                  <Link to='download' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Mobile Wallet</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div>
-            <p className=' md:text-lg font-medium mb-4 '>SUPPORT</p>
+            {/* <p className=' md:text-lg font-medium mb-4 '>SUPPORT</p> */}
             <div>
               <ul>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Support</Link>
+                  {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Support</Link> */}
                 </li>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal Inquires</Link>
+                  {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal Inquires</Link> */}
                 </li>
-                <li className='mb-4'>
+                {/* <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Status</Link>
+                </li> */}
+                <li className='mb-4'>
+                  <Link to='/terms' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Terms and Conditions</Link>
                 </li>
                 <li className='mb-4'>
-                  <Link to='terms' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Terms and Conditions</Link>
-                </li>
-                <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Enquires and Sponsorship</Link>
+                  {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Enquires and Sponsorship</Link> */}
                 </li>
               </ul>
             </div>
