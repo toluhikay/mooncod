@@ -124,18 +124,18 @@ if(isSuccess){
                     <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Get</p>
                        
                         <p className='font-bold md:text-xl text-sm'>{exchangeValue.toFixed(5)}</p>
-                        <div className='flex items-center pl-[5px] border-white border-l-2 w-1/3 justify-between'>
+                        <div className='flex items-center  border-white border-l-2 w-1/3 justify-between'>
                         {/* <DollarCircleFilled className='text-[#008AED]'/> */}
                         {/* <p className='flex items-center md:text-base text-sm font-bold'>BTC<DownOutlined className="md:text-sm text-xs"/> </p> */}
                         <select
-            className='flex items-center md:text-base text-sm font-bold bg-transparent outline-0 border-0 py-2 px-2'
+            className='flex items-center text-base font-bold bg-transparent outline-0 border-0 py-2'
             onChange={(e) => {
                 setValue(e.target.value)
                 }}>
             {isSuccess && (
               <Fragment >
                 {data.map((coin) => (
-                  <option key={coin.id} className='text-black py-4 px-3' label={coin.name} value={coin.current_price}>
+                  <option key={coin.id} className='text-black text-base' label={coin.name} value={coin.current_price}>
                     {coin.name}
                   </option>
                 ))}

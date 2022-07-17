@@ -103,7 +103,7 @@ const AboutUs = () => {
                   <img src={Safe} alt='Safe' loading='lazy' />
                 </div>
                 <h6 className='text-body text-3xl font-bold text-white '>
-                  Safe
+                  Trust
                 </h6>
               </div>
             </DetailCard>
@@ -119,10 +119,10 @@ const AboutUs = () => {
                   outlineOffset: "-1px",
                 }}>
                 <div>
-                  <img src={Reliable} alt='Reliable' loading='lazy' />
+                  <img src={Reliable} alt='Polit' loading='lazy' />
                 </div>
                 <h6 className='text-body text-3xl font-bold text-white '>
-                  Reliable
+                  Polit
                 </h6>
               </div>
             </DetailCard>
@@ -138,10 +138,10 @@ const AboutUs = () => {
                   outlineOffset: "-1px",
                 }}>
                 <div>
-                  <img src={Trusted} alt='Trusted' loading='lazy' />
+                  <img src={Trusted} alt=' Google verification' loading='lazy' />
                 </div>
-                <h6 className='text-body text-3xl font-bold text-white '>
-                  Trusted
+                <h6 className='text-body text-3xl font-bold text-center text-white '>
+                  Google verification
                 </h6>
               </div>
             </DetailCard>

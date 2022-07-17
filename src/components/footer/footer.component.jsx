@@ -5,7 +5,7 @@ import { FacebookOutlined, RedditCircleFilled, TwitterOutlined, InstagramOutline
 import {FaTelegram} from 'react-icons/fa'
 // import Telegram from '../../assets/telegram.svg'
 
-const Footer = () => {
+const Footer = ({children}) => {
   const date = new Date();
   const year = date.getFullYear()
 
@@ -13,6 +13,7 @@ const Footer = () => {
   
   return (
     <Fragment>
+      
       <div className='px-3 bg-[#080A0C] md:px-32 '>
         <div className='bg-[#080A0C] text-white flex flex-col md:flex-row md:justify-between md:pt-24 pb-6 '>
           <div>
@@ -22,17 +23,17 @@ const Footer = () => {
                 <li className='mb-4'>
                   <Link to='/about' className='md:text-base text-xs text-[#DAE0E7] font-medium' >About Moncod</Link>
                 </li>
-                {/* <li className='mb-4'>
+                <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Affiliate</Link>
                 </li>
-                <li className='mb-4'>
+                 <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Blog</Link>
-                </li> */}
+                 </li>
                 <li className='mb-4'>
-                  {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Digital Asset Disclosures</Link> */}
+                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Digital Asset Disclosures</Link>
                 </li>
                 <li className='mb-4'>
-                  <Link to='/policy' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal & Privacy</Link>
+                  <Link to='/policies' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal & Privacy</Link>
                 </li>
               </ul>
             </div>
@@ -51,23 +52,23 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            {/* <p className=' md:text-lg font-medium mb-4 '>SUPPORT</p> */}
+            <p className=' md:text-lg font-medium mb-4 '>SUPPORT</p>
             <div>
               <ul>
                 <li className='mb-4'>
-                  {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Support</Link> */}
+                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Support</Link>
                 </li>
                 <li className='mb-4'>
                   {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal Inquires</Link> */}
                 </li>
-                {/* <li className='mb-4'>
+                <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Status</Link>
-                </li> */}
+                </li>
                 <li className='mb-4'>
                   <Link to='/terms' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Terms and Conditions</Link>
                 </li>
                 <li className='mb-4'>
-                  {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Enquires and Sponsorship</Link> */}
+                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Enquires and Sponsorship</Link>
                 </li>
               </ul>
             </div>

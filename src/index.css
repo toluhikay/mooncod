@@ -6,28 +6,69 @@
   a{
     @apply text-[#fff] font-bold  
   }
-  /* table{
+  #table{
     @apply text-base w-full flex flex-col justify-between 
   }
-  tr{
+  #table tr{
     @apply w-auto flex justify-between
   }
-  td, th {
+  #table td, #table th {
     @apply w-1/4 border border-[#c4c4c4] flex justify-center items-center p-3 border-collapse
   }
-  td{
+  #table td{
     @apply text-sm
   }
-  th{
+  #table th{
     @apply  font-extrabold
-  } */
+  }
+  #table2{
+    @apply text-base w-full flex flex-col justify-between 
+  }
+  #table2 tr{
+    @apply w-auto flex justify-between
+  }
+  #table2 td, #table2 th {
+    @apply w-1/2 border border-[#c4c4c4] flex justify-center items-center p-3 border-collapse
+  }
+  #table2 td{
+    @apply text-sm
+  }
+  #table2 th{
+    @apply  font-extrabold
+  } 
 }
 @layer base{
   html{
     font-family: 'Archivo', sans-serif;
   }
 }
-
+/* #table td{
+  font-size: 14px;
+}
+#table th {
+  font-weight: 700;
+}
+#table{
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#table tr{
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#table td, #table th{
+  width: 25%;
+  border: 1px solid #c4c4c4;
+  display: flex;
+  border-collapse: collapse;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+} */
 header{
   background-color: #080A0C;
   background-image: url(../src/assets/walletbackgroundgradient.png);

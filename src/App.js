@@ -32,7 +32,7 @@ function App() {
             <Route path='faq' element={<Faq />}></Route>
             <Route path='download' element={<Download />}></Route>
             <Route path='explore' element={<Explore />}></Route>
-            <Route path='polices' element={<LegalPolicy />}></Route>
+            <Route path='policies' element={<LegalPolicy />}></Route>
             <Route path='terms' element={<TermsConditions />}></Route>
           </Routes>
         </ScrollToTop>
