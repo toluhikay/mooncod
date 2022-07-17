@@ -42,7 +42,7 @@ const LegalPolicy = () => {
                             </li>
                             <li>
                                 <p className='font-bold md:text-2xl text-xl py-5'>Our Relationship With You</p>
-                                <table>
+                                <table id='table'>
                                     <tr>
                                         <th>Where You Reside</th>
                                         <th>Services Provided</th>
@@ -224,7 +224,7 @@ const LegalPolicy = () => {
                                 <p className='text-base'>
                                 For individuals who are located in the European Economic Area, the United Kingdom or Switzerland (collectively “EEA Residents'') at the time their personal information is collected, our legal bases for processing your information under the EU General Data Protection Regulation (“GDPR”) will depend on the personal information at issue, the specific context in the which the personal information is collected and the purposes for which it is used. We generally only process your data where we are legally required to, where processing is necessary to perform any contracts we entered with you (or to take steps at your request prior to entering into a contract with you), where processing is in our legitimate interests to operate our business and not overridden by your data protection interests or fundamental rights and freedoms, or where we have obtained your consent to do so. In some rare instances, we may need to process your personal information to protect your vital interests or those of another person. Below is a list of how CB uses your personal information, as described above in Section 5, with the corresponding legal bases for processing. If you have questions about or need further information concerning the legal basis on which we collect and use your personal information, please contact us using the contact details provided under the "How to contact us" heading below.
                                 </p>
-                                <table className='my-5'>
+                                <table className='my-5' id='table2'>
                                     <tr className=' w-auto '>
                                         <th className='w-1/2'>Section & Purpose of Processing</th>
                                         <th className='w-1/2'>Legal Bases for Processing</th>
