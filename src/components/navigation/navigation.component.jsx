@@ -13,7 +13,7 @@ const CompanyDropdown = function ({ dropdownState }) {
   return (
     <div
       className={`${
-        dropdownState ? "opacity-1" : "opacity-0"
+        dropdownState ? "visible" : "invisible"
       } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown`}>
       <Link
         to='/about'
@@ -41,7 +41,7 @@ const DropDownLink = function (props) {
   return (
     <div
       className={` ${
-        props.dropdownState ? "opacity-1" : "opacity-0"
+        props.dropdownState ? "visible" : 'invisible'
       } w-[36rem] h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] left-[30%] duration-300 transition`}>
       <Link
         to='/'
