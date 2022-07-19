@@ -104,7 +104,7 @@ if(isSuccess){
 
                     <div className='flex bg-gradient-to-r from-[#ffffff40] to-[#ffffff20] bg-opacity-40 py-5 px-8 rounded-full w-full md:w-[32%] mb-5 md:mb-0 justify-between items-center relative'>
                     <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Pay</p>
-                        <input className='font-bold py-1 md:text-xl text-sm border-0 outline-0 bg-transparent'
+                        <input className='font-bold w-full py-1 md:text-xl text-sm border-0 outline-0 bg-transparent'
                         type={'number'}
                         id='currency'
                         placeholder='value in USD'
@@ -120,15 +120,15 @@ if(isSuccess){
                     </div>
 
 
-                    <div className='flex bg-gradient-to-r from-[#ffffff40] to-[#ffffff20] bg-opacity-40 py-5 px-8 rounded-full w-full md:w-[32%] mb-5 md:mb-0 justify-between items-center relative'>
-                    <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 rounded-full md:text-base text-sm font-semibold'>Get</p>
+                    <div className='flex bg-gradient-to-r from-[#ffffff40] to-[#ffffff20] bg-opacity-40 py-5 px-8 md:px-4 rounded-full w-full md:w-[32%] mb-5 md:mb-0 justify-between md:justify-evenly items-center relative'>
+                    <p className='absolute -top-[15px] bg-gradient-to-r from-[#008AED] to-[#54F0D1] py-[2px] px-4 left-5 rounded-full md:text-base text-sm font-semibold'>Get</p>
                        
                         <p className='font-bold md:text-xl text-sm'>{exchangeValue.toFixed(5)}</p>
                         <div className='flex items-center  border-white border-l-2 w-1/3 justify-between'>
                         {/* <DollarCircleFilled className='text-[#008AED]'/> */}
                         {/* <p className='flex items-center md:text-base text-sm font-bold'>BTC<DownOutlined className="md:text-sm text-xs"/> </p> */}
                         <select
-            className='flex items-center text-base font-bold bg-transparent outline-0 border-0 py-2'
+            className='flex items-center text-base font-bold bg-transparent outline-0 border-0 py-2 w-full'
             onChange={(e) => {
                 setValue(e.target.value)
                 }}>
@@ -167,7 +167,7 @@ if(isSuccess){
 
                     <div className='w-auto md:w-[32%] flex justify-center items-center'>
                         <button className='w-auto md:w-full px-12 flex justify-center items-center bg-gradient-to-r from-[#008AED]
-                        to-[#54F0D1] rounded-full md:py-5 py-3 font-bold md:text-2xl sm:text-xl text-base' onClick={onExchange}>Exchange</button>
+                        to-[#54F0D1] rounded-full md:py-5 py-3 font-bold md:text-2xl sm:text-xl text-base' onClick={onExchange}>Convert</button>
                     </div>
                 </div>
             </div>

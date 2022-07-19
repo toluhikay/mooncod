@@ -14,8 +14,8 @@ const Footer = ({children}) => {
   return (
     <Fragment>
       
-      <div className='px-3 bg-[#080A0C] md:px-32 '>
-        <div className='bg-[#080A0C] text-white flex flex-col md:flex-row md:justify-between md:pt-24 pb-6 '>
+      <div className='px-3 bg-[#080A0C] '>
+        <div className='bg-[#080A0C] text-white flex flex-col md:flex-row md:justify-evenly md:pt-24 pb-6 '>
           <div>
             <Link to='/faq' className=' md:text-lg font-medium mb-4 '>COMPANY</Link>
             <div>
