@@ -9,6 +9,7 @@ import Download from "./components/pages/Download";
 import LegalPolicy from "./components/footer/footer pages/legalPolicy.footer";
 import Faq from "./components/pages/faq";
 import TermsConditions from "./components/footer/footer pages/termsCondition";
+import Support from "./components/footer/footer pages/support.footer";
 import ScrollToTop from "./scroll";
 
 import { QueryClientProvider, QueryClient } from "react-query";
@@ -32,6 +33,7 @@ function App() {
             <Route path='explore' element={<Explore />}></Route>
             <Route path="legalPolicy" element={<LegalPolicy/>}></Route>
             <Route path="terms" element={<TermsConditions/>} ></Route>
+            <Route path="support" element={<Support/>} ></Route>
           </Routes>
         </ScrollToTop>
         <Footer />
