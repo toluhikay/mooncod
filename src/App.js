@@ -10,17 +10,20 @@ import LegalPolicy from "./components/footer/footer pages/legalPolicy.footer";
 import Faq from "./components/pages/faq";
 import TermsConditions from "./components/footer/footer pages/termsCondition";
 import Support from "./components/footer/footer pages/support.footer";
+
 import ScrollToTop from "./scroll";
 
 import { QueryClientProvider, QueryClient } from "react-query";
+
 import Explore from "./components/pages/Explore";
+import TermsConditions from "./components/footer/footer pages/termsCondition";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
+      <div className='overflow-hidden'>
         <ScrollToTop>
           <Routes>
             {/* <Route path='/' element={<Navigation />}> */}
@@ -34,6 +37,9 @@ function App() {
             <Route path="legalPolicy" element={<LegalPolicy/>}></Route>
             <Route path="terms" element={<TermsConditions/>} ></Route>
             <Route path="support" element={<Support/>} ></Route>
+            //<Route path='policies' element={<LegalPolicy />}></Route>
+            //<Route path='terms' element={<TermsConditions />}></Route>
+
           </Routes>
         </ScrollToTop>
         <Footer />

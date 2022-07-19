@@ -4,7 +4,7 @@
 
 @layer base{
   a{
-    @apply text-[#fff] text-base font-bold  
+    @apply text-[#fff] font-bold  
   }
   #table{
     @apply text-base w-full flex flex-col justify-between 
@@ -35,7 +35,7 @@
   }
   #table2 th{
     @apply  font-extrabold
-  }
+  } 
 }
 @layer base{
   html{
@@ -125,6 +125,12 @@ header{
 #faq{
   background-color: #080A0C;
   background-image: url(../src/assets/walletbackgroundgradient.png);
+  background-position: center;
+  background-size: cover;
+}
+#explore{
+  background-color: #080A0C;
+  background-image: url(../src/assets/explore.png);
   background-position: center;
   background-size: cover;
 }

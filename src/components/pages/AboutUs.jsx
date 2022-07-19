@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import {Helmet} from 'react-helmet-async'
 
 import PreFooter from "./PreFooter";
 import Dashboard from "../../assets/dashboard.png";
@@ -31,6 +32,15 @@ export const DetailCard = function ({ children }) {
 
 const AboutUs = () => {
   return (
+    <>
+    <Helmet>
+      <title>About MoonCod Bitcoin and Crypto Wallet</title>
+    <meta
+      name="description"
+      content=" User-friendly crypto wallet with unique features that make your Web3 experience safe."
+    />
+<link rel='canonical' href='/about'/>
+    </Helmet>
     <main>
       <Header>
         <div className='container  md:px-16 xl:px-20 mx-auto h-full w-full flex flex-col items-center justify-between flex-wrap lg:flex-nowrap sm:mt-8 lg:mt-0'>
@@ -93,7 +103,7 @@ const AboutUs = () => {
                   <img src={Safe} alt='Safe' loading='lazy' />
                 </div>
                 <h6 className='text-body text-3xl font-bold text-white '>
-                  Safe
+                  Trust
                 </h6>
               </div>
             </DetailCard>
@@ -109,10 +119,10 @@ const AboutUs = () => {
                   outlineOffset: "-1px",
                 }}>
                 <div>
-                  <img src={Reliable} alt='Reliable' loading='lazy' />
+                  <img src={Reliable} alt='Polit' loading='lazy' />
                 </div>
                 <h6 className='text-body text-3xl font-bold text-white '>
-                  Reliable
+                  Polit
                 </h6>
               </div>
             </DetailCard>
@@ -128,10 +138,10 @@ const AboutUs = () => {
                   outlineOffset: "-1px",
                 }}>
                 <div>
-                  <img src={Trusted} alt='Trusted' loading='lazy' />
+                  <img src={Trusted} alt=' Google verification' loading='lazy' />
                 </div>
-                <h6 className='text-body text-3xl font-bold text-white '>
-                  Trusted
+                <h6 className='text-body text-3xl font-bold text-center text-white '>
+                  Google verification
                 </h6>
               </div>
             </DetailCard>
@@ -391,6 +401,7 @@ const AboutUs = () => {
       </section>
       <PreFooter />
     </main>
+    </>
   );
 };
 

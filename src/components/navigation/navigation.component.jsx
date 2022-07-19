@@ -13,8 +13,8 @@ const CompanyDropdown = function ({ dropdownState }) {
   return (
     <div
       className={`${
-        dropdownState ? "opacity-1" : "opacity-0"
-      } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown `}>
+        dropdownState ? "visible" : "invisible"
+      } w-64 h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] right-60 duration-100 transition ease-in companydropdown`}>
       <Link
         to='/about'
         className='h-10 w-28 flex items-center justify-evenly bg-green-500 py-4 px-2 rounded-md mt-4'
@@ -41,7 +41,7 @@ const DropDownLink = function (props) {
   return (
     <div
       className={` ${
-        props.dropdownState ? "opacity-1" : "opacity-0"
+        props.dropdownState ? "visible" : 'invisible'
       } w-[36rem] h-[8rem] rounded-lg shadow-lg dropdown flex items-center justify-evenly absolute top-[70%] left-[30%] duration-300 transition`}>
       <Link
         to='/'
@@ -117,7 +117,11 @@ const Navigation = () => {
     <Fragment>
       <div
         className='bg-[181e25] fixed w-screen z-50'
-        style={{ backdropFilter: "blur(85px)" }}>
+        style={{ backdropFilter: "blur(85px)" }}
+        onMouseLeave={() => {
+          setShow(false);
+          setShowDropdown(false)
+        }}>
         <div className='bg-[#181E25] bg-opacity-50 px-2 py-2 xl:px-32 lg:px-20 lg:py-6 flex justify-between items-center top-0 right-0'>
           <div className='flex justify-between w-full py-2 lg:py-0 lg:w-1/4'>
             <Link to='/' className=' text-red-700 '>
@@ -137,8 +141,7 @@ const Navigation = () => {
               <li>
                 <Link
                   to='/explore'
-                  className='hover:text-[#008AED] active:[#008AED
-] transition ease duration-300'>
+                  className='hover:text-[#008AED] active:[#008AED] transition ease duration-300'>
                   Explore
                 </Link>
               </li>
@@ -147,10 +150,12 @@ const Navigation = () => {
                   to='#'
                   className='relative hover:text-[#008AED] active:text-[#008AED]'
                   id='individual'
-                  onClick={() => {
+                  onMouseEnter={() => {
                     setShowDropdown(!showDropdown);
                     setShow(false);
-                  }}>
+                  }}
+                 
+                  >
                   Individuals
                   <span>
                     <DownOutlined className='text-xs ' />
@@ -160,10 +165,10 @@ const Navigation = () => {
               <DropDownLink dropdownState={showDropdown} />
               <li>
                 <Link
-                  to='/'
+                  to='/wallet'
                   className='hover:text-[#008AED] active:[#008AED
 ] transition ease duration-300'>
-                  Investors
+                  Wallet
                 </Link>{" "}
               </li>
               <li>
@@ -171,10 +176,11 @@ const Navigation = () => {
                   to='#'
                   // id='company'
                   className='relative hover:text-[#008AED] active:text-[#008AED]'
-                  onClick={(e) => {
+                  onMouseEnter={(e) => {
                     setShow(!show);
                     setShowDropdown(false);
-                  }}>
+                  }}
+                >
                   Company
                   <span>
                     <DownOutlined className='text-xs ' />
@@ -245,7 +251,7 @@ const Navigation = () => {
                 to='/'
                 className='hover:text-[#008AED] active:[#008AED
 ] transition ease duration-300'>
-                Investors
+                Wallet
               </Link>{" "}
             </li>
 
