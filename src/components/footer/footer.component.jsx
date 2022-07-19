@@ -56,14 +56,14 @@ const Footer = ({children}) => {
             <div>
               <ul>
                 <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Support</Link>
+                  <Link to='support' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Support</Link>
                 </li>
                 <li className='mb-4'>
                   {/* <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Legal Inquires</Link> */}
                 </li>
-                <li className='mb-4'>
+                {/* <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Status</Link>
-                </li>
+                </li> */}
                 <li className='mb-4'>
                   <Link to='/terms' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Terms and Conditions</Link>
                 </li>
