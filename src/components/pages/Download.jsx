@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "./Header";
-import Mac from "../../assets/macbook.png";
-import Phones from "../../assets/doublePhones.png";
-import PlayStore from "../../assets/playStore.png";
-import AppStore from "../../assets/appStore.png";
+import Mac from "../../assets/macbook.webp";
+import Phones from "../../assets/doublePhones.webp";
+import PlayStore from "../../assets/playStore.webp";
+import AppStore from "../../assets/appStore.webp";
 import PreFooter from "./PreFooter";
 import { Link } from "react-router-dom";
 import { StarFilled } from "@ant-design/icons";

@@ -124,9 +124,9 @@ const Explore = () => {
 
           <td className='text-sm text-white font-light py-4 whitespace-nowrap'>
             <Link
-              to={"download"}
-              className='flex items-center justify-center md:text-base  text-[8px]'>
-              Trade Now <ArrowRightOutlined className='ml-4 text-[20px]' />
+              to={"/download"}
+              className='flex items-center justify-center md:text-base text-[8px]'>
+              Trade Now <ArrowRightOutlined className='ml-2 text-[20px]' />
             </Link>
           </td>
         </tr>
@@ -174,9 +174,7 @@ const Explore = () => {
                     className='text-sm font-bold text-white px-6 py-4 text-left text-[#3D8DFF]'>
                     Chart
                   </th> */}
-                  <th
-                    scope='col'
-                    className='text-sm font-bold text-white px-6 py-4 text-left'>
+                  <th scope='col' className='text-sm font-bold text-white py-4'>
                     Trade Now
                   </th>
                 </tr>
@@ -286,7 +284,7 @@ const Explore = () => {
           </article>
         </section>
 
-        <section className="bg-cover bg-center bg-[#080A0C] bg-[url('/src/assets/trend.png')]  ">
+        <section className="bg-cover bg-center bg-[#080A0C] bg-[url('/src/assets/trend.webp')]  ">
           <article className='container'>
             <div className='flex flex-wrap justify-evenly items-center w-full py-10 '>
               <div className='flex flex-col justify-evenly flex-wrap mx-2 mb-4 rounded-2xl border-2 border-[#3D8DFF] w-full md:w-[35.3rem] sm:h-auto h-auto px-7 py-3'>

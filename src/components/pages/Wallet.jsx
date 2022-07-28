@@ -3,17 +3,17 @@ import Header from "./Header";
 import {Helmet} from 'react-helmet-async'
 import PageHeader from "./PageHeader";
 import PreFooter from "./PreFooter";
-import PlayStore from "../../assets/playStore.png";
-import AppStore from "../../assets/appStore.png";
-import Phones from "../../assets/overlayingPhone.png";
-// import SMS from "../../assets/sms.png";
-import Control from "../../assets/control.png";
-import Store from "../../assets/store.png";
-import Security from "../../assets/security.png";
-import Work from "../../assets/work.png";
-import Icons from "../../assets/cryptoIcons.png";
-import Mobile from "../../assets/cryptoMobile.png";
-import TwinMobile from "../../assets/twinMobile.png";
+import PlayStore from "../../assets/playStore.webp";
+import AppStore from "../../assets/appStore.webp";
+import Phones from "../../assets/overlayingPhone.webp";
+// import SMS from "../../assets/sms.webp";
+import Control from "../../assets/control.webp";
+import Store from "../../assets/store.webp";
+import Security from "../../assets/security.webp";
+import Work from "../../assets/work.webp";
+import Icons from "../../assets/cryptoIcons.webp";
+import Mobile from "../../assets/cryptoMobile.webp";
+import TwinMobile from "../../assets/twinMobile.webp";
 import Help from "./Help";
 
 const Wallet = () => {

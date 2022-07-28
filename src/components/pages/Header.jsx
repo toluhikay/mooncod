@@ -1,5 +1,5 @@
 import React from 'react'
-import wallet from '../../assets/walletbackgroundgradient.png'
+import wallet from '../../assets/walletbackgroundgradient.webp'
 import Navigation from '../navigation/navigation.component';
 
 import '../../index.css'

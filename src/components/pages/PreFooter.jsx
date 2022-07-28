@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Saly from "../../assets/Saly.png";
+import Saly from "../../assets/Saly.webp";
 
 const PreFooter = () => {
   return (

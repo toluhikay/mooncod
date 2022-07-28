@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react'
 // import { FaUserPlus } from 'react-icons/fa'
 // import {GiBank, GiSellCard} from 'react-icons/gi'
-import CryptoIcons from '../../../assets/cryptoIcons.png'
-import stepPerson from '../../../assets/stepsPerson.png'
-import stepBank from '../../../assets/stepsBank.png'
-import stepHand from '../../../assets/stepsHand.png'
+import CryptoIcons from '../../../assets/cryptoIcons.webp'
+import stepPerson from '../../../assets/stepsPerson.webp'
+import stepBank from '../../../assets/stepsBank.webp'
+import stepHand from '../../../assets/stepsHand.webp'
 
 const Steps = () => {
   return (
     <Fragment>
-        <div className="lg:py-20 md:py-10 py-5 lg:px-32 md:px-7 px-4 flex flex-col justify-center items-center bg-[#080A0C] bg-[url(/src/assets/stepsBackground.png)] bg-center bg-cover text-white">
+        <div className="lg:py-20 md:py-10 py-5 lg:px-32 md:px-7 px-4 flex flex-col justify-center items-center bg-[#080A0C] bg-[url(/src/assets/stepsBackground.webp)] bg-center bg-cover text-white">
             <div className='flex flex-col items-center justify-center w-4/6 text-center'>
                 <p className='lg:text-5xl md:text-4xl text-xl font-bold pb-4'>Initiate trade with three easy steps</p>
                 <p className='md:text-lg text-xs'>Explore your risk appetite and choices, create a Mooncod account and build your portfolio from the wide variety of available assets.</p>

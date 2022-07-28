@@ -66,7 +66,8 @@ setLoaderState(true)
                                 </button>
                             </div>
                             {
-                                submit && <Example/>
+                                submit && <Example header={'Email Sent Successfully'} paragraph='                          Thank you for your feedback, we promise to get back to you soon
+                                '/>
                             }
                         </form>
                     </div>

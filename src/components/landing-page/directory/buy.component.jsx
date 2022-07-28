@@ -1,6 +1,6 @@
 import { ArrowRightOutlined } from '@ant-design/icons'
 import React, { Fragment } from 'react'
-import Chart from '../../../assets/chart.png'
+import Chart from '../../../assets/chart.webp'
 import QuickStart from './quickstart.component'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
@@ -15,7 +15,7 @@ const BuyDirectory = () => {
 
   return (
     <Fragment>
-        <div className="bg-[#0b1f33] bg-[url('/src/assets/buyBackground.png')] bg-cover bg-center text-[#fff] lg:px-32 md:px-7 lg:py-28 md:py-12 py-5 flex flex-col items-center justify-center">
+        <div className="bg-[#0b1f33] bg-[url('/src/assets/buyBackground.webp')] bg-cover bg-center text-[#fff] lg:px-32 md:px-7 lg:py-28 md:py-12 py-5 flex flex-col items-center justify-center">
             <div className='text-center flex items-center justify-center flex-col sm:w-2/3 w-5/6'>
                 <p className='lg:text-5xl md:text-4xl text-2xl font-bold pb-4'>Low Fees, Super fast swaps</p>
                 <p className='md:text-lg text-base w-4/5 lg:pb-20 md:pb-11 pb-6'>Take complete control of your assets via our one-stop services platform with bank transfer and credit card compatibility, high execution speed and low fees.</p>

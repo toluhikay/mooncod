@@ -6,7 +6,7 @@ export default function TermsConditions() {
     <Fragment>
         <div>
             <Header>
-                <div className="lg:px-32 lg:py-[82px] md:px-20 md:py-10 py-6 text-center px-7  flex flex-col justify-between items-center bg-[#080A0C] bg-[url('/src/assets/sectionBackground.png')] bg-cover bg-center text-white">
+                <div className="lg:px-32 lg:py-[82px] md:px-20 md:py-10 py-6 text-center px-7  flex flex-col justify-between items-center bg-[#080A0C] bg-[url('/src/assets/sectionBackground.webp')] bg-cover bg-center text-white">
                     <p className='md:py-8 py-16 md:text-3xl md:w-3/5 w-4/5 text-2xl font-bold'>Mooncod Crypto and Market Place Terms and Conditions</p>
                     <p className='md:text-lg text-sm font-normal md:w-[61%] w-[80%]'>You can always read our Terms of Service in full, but we know you’re busy so here are the highlight</p>
                     

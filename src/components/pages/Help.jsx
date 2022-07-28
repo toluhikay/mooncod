@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
-import SMS from "../../assets/sms.png";
+import SMS from "../../assets/sms.webp";
 
 
 const Help =()=> {

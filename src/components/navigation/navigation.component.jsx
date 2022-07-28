@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
-import logo from "../../assets/logomoon.png";
+import logo from "../../assets/logomoon.webp";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import Wallet from "../../assets/walletIcon.png";
-import Logo from "../../assets/faviconlogo.png";
+import Wallet from "../../assets/walletIcon.webp";
+import Logo from "../../assets/faviconlogo.webp";
 
 //  headline='Moodcod Wallet'
 // subHeadline='The best self-hosted crypto wallet'

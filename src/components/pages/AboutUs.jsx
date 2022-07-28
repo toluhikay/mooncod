@@ -3,15 +3,15 @@ import Header from "./Header";
 import {Helmet} from 'react-helmet-async'
 
 import PreFooter from "./PreFooter";
-import Dashboard from "../../assets/dashboard.png";
-import SMS from "../../assets/sms.png";
-import Safe from "../../assets/safe.png";
-import Reliable from "../../assets/reliable.png";
-import Trusted from "../../assets/trusted.png";
-import StanLee from "../../assets/stan-lee.jpeg";
-import Emilie from "../../assets/Emilie-Choi.jpeg";
-import William from "../../assets/William-Surojit.jpeg";
-import Helen from "../../assets/Helen-Pauline .jpeg";
+import Dashboard from "../../assets/dashboard.webp";
+import SMS from "../../assets/sms.webp";
+import Safe from "../../assets/safe.webp";
+import Reliable from "../../assets/reliable.webp";
+import Trusted from "../../assets/trusted.webp";
+import StanLee from "../../assets/stan-lee.webp";
+import Emilie from "../../assets/Emilie-Choi.webp";
+import William from "../../assets/William-Surojit.webp";
+import Helen from "../../assets/Helen-Pauline .webp";
 
 export const AboutPageHeader = function ({ header, paragraph }) {
   return (

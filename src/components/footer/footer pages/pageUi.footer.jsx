@@ -21,7 +21,7 @@ const PageUi = () => {
         <Header>
 
         </Header>
-        <div className="lg:px-32 lg:py-[82px] md:px-20 md:py-10 px-7 py-6 flex justify-between items-center bg-[#080A0C] bg-[url('/src/assets/sectionBackground.png')] bg-cover bg-center text-white">
+        <div className="lg:px-32 lg:py-[82px] md:px-20 md:py-10 px-7 py-6 flex justify-between items-center bg-[#080A0C] bg-[url('/src/assets/sectionBackground.webp')] bg-cover bg-center text-white">
     
         </div>
     </Fragment>

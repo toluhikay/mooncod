@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react'
-import phoneOne from '../../../assets/tradephone1.png'
-import phoneTwo from '../../../assets/tradephone2.png'
-import phoneThree from '../../../assets/tradephone3.png'
-import appStore from '../../../assets/appStore.png'
-import playStore from '../../../assets/playStore.png'
-import bitcoinWallet from '../../../assets/bitcoinWallet.png'
+import phoneOne from '../../../assets/tradephone1.webp'
+import phoneTwo from '../../../assets/tradephone2.webp'
+import phoneThree from '../../../assets/tradephone3.webp'
+import appStore from '../../../assets/appStore.webp'
+import playStore from '../../../assets/playStore.webp'
+import bitcoinWallet from '../../../assets/bitcoinWallet.webp'
 import { Link } from 'react-router-dom'
 
 const Manage = () => {
   return (
     <Fragment>
-        <div className="bg-[url('/src/assets/manageBackground.png')] bg-center bg-cover text-white flex flex-col items-center justify-center text-center py-16 lg:px-32 relative">
+        <div className="bg-[url('/src/assets/manageBackground.webp')] bg-center bg-cover text-white flex flex-col items-center justify-center text-center py-16 lg:px-32 relative">
             <div className='lg:w-1/2 w-4/5 justify-center items-center'>
               <p className='lg:text-5xl md:text-3xl text-2xl font-bold mb-4'>Trade Anywhere with the Mooncod App</p>
               <p className='md:text-lg sm:text-base text-xs mb-6 '>Full access to the market nd your assets on the go. Maintain the best experience with iOS, and android support</p>

@@ -21,7 +21,7 @@ const LegalPolicy = () => {
         <Header>
 
         </Header>
-        <div className="w-full lg:px-32 lg:py-[82px] md:px-20 md:py-10 px-7 py-6 flex flex-col justify-between items-center bg-[#080A0C] bg-[url('/src/assets/sectionBackground.png')] bg-cover bg-center text-white">
+        <div className="w-full lg:px-32 lg:py-[82px] md:px-20 md:py-10 px-7 py-6 flex flex-col justify-between items-center bg-[#080A0C] bg-[url('/src/assets/sectionBackground.webp')] bg-cover bg-center text-white">
             <h1 className='lg:text-5xl md:text-4xl sm:text-3xl text-3xl lg:py-20 py-16 font-bold'>
                 Legal
             </h1>

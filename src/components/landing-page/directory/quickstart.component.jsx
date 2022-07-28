@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import TwoMobile from '../../../assets/twinMobile2.png'
+import TwoMobile from '../../../assets/twinMobile2.webp'
 
 const QuickStart = () => {
   return (

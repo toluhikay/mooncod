@@ -1,20 +1,33 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logomoon.png'
+import logo from '../../assets/logomoon.webp'
 import { FacebookOutlined, RedditCircleFilled, TwitterOutlined, InstagramOutlined,} from '@ant-design/icons'
 import {FaTelegram} from 'react-icons/fa'
+import emailjs from 'emailjs-com'
+import Example from './footer pages/modalSuccess'
+
 // import Telegram from '../../assets/telegram.svg'
 
 const Footer = ({children}) => {
+  const [submit, setSubmit] = useState(false)
+
   const date = new Date();
   const year = date.getFullYear()
 
- 
+  const sendEmail=(e)=>{
+    e.preventDefault()
+// setLoaderState(true)
+    emailjs.sendForm("service_cerglzl", "template_u1fe6vc", e.target, "mG0Wc3avis-PiQsdY")
+        .then(res=> {
+        // setLoaderState(false)
+            setSubmit(!submit)
+          })
+}
   
   return (
     <Fragment>
       
-      <div className='px-3 bg-[#080A0C] '>
+      <article className='px-3 bg-[#080A0C] '>
         <div className='bg-[#080A0C] text-white flex flex-col md:flex-row md:justify-evenly md:pt-24 pb-6 '>
           <div>
             <Link to='/faq' className=' md:text-lg font-medium mb-4 '>COMPANY</Link>
@@ -77,7 +90,7 @@ const Footer = ({children}) => {
             <p className=' md:text-lg font-medium mb-4 '>JOIN OUR COMMUNITY</p>
             <div className=''>
               <p className='w-80 mb-4 md:text-lg sm:text-sm text-xs'>Subscribe to receive updates, access to exclusive deals, and more.</p>
-              <form action="">
+              <form action="" onSubmit={sendEmail}>
                 <input type="text" placeholder='Enter your email address' className=' bg-inherit appearance-none border-[#fff]  border-2 py-3 px-3 w-full md:w-72 rounded-full outline-none text-white mb-4'/>
                 <br />
                 <button className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] w-full md:w-72 py-3 rounded-full'>Subscribe</button>
@@ -86,12 +99,12 @@ const Footer = ({children}) => {
           </div>
         </div>
 
-        <div className=' pb-14 flex flex-col md:flex-row justify-between '>
-          <div className='flex sm:flex-row flex-col items-start py-3  justify-between sm:items-center md:w-1/2'>
+        <div className=' pb-14 flex flex-col md:flex-row justify-between md:justify-center '>
+          <div className='flex sm:flex-row flex-col items-start py-3  justify-start sm:items-center md:w-1/2'>
             <img src={logo} alt=""  className=' md:border-r-2 border-[#fff] pr-8 '/>
-            <p className='text-white md:text-base sm:text-sm text-xs sm:pt-0 pt-4'>© <span>{year}</span> Moncod - All Rights Reserved</p>
+            <p className='text-white md:text-base sm:text-sm lg:mx-4 text-xs sm:pt-0 pt-4'>© <span>{year}</span> Moncod - All Rights Reserved</p>
           </div>
-          <div className='text-white w-1/3 flex justify-between items-center'>
+          <div className='text-white w-1/3 flex justify-evenly items-center'>
             <a href="https://www.facebook.com/moodcod452" target={'_blank'} rel="noreferrer">
             <FacebookOutlined/>
             </a>
@@ -112,10 +125,14 @@ const Footer = ({children}) => {
             {/* <GoogleOutlined/> */}
             {/* <LinkedinFilled/> */}
             {/* <SlackOutlined/> */}
+            {
+                                submit && <Example paragraph='' header='Thank You For Subscripting to Our Newsletter'/>
+                            }
 
           </div>
         </div>
-      </div>
+      </article>
+      
     </Fragment>
   )
 }
