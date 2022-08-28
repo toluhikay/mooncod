@@ -6,9 +6,6 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Wallet from "../../assets/walletIcon.webp";
 import Logo from "../../assets/faviconlogo.webp";
 
-//  headline='Moodcod Wallet'
-// subHeadline='The best self-hosted crypto wallet'
-// link='/wallet'
 const CompanyDropdown = function ({ dropdownState }) {
   return (
     <div
@@ -79,19 +76,6 @@ const DropDownLink = function (props) {
   );
 };
 
-// const Navigation = () => {
-//   const [nav, setNav] = useState(true);
-//   const [showDropdown, setShowDropdown] = useState(false);
-//   const [show, setShow] = useState(false);
-// >>>>>>> otherPages
-
-// export default Navigation;
-
-// import React, {Fragment, useState} from 'react'
-// import { Outlet, Link } from 'react-router-dom'
-// import {DownOutlined} from '@ant-design/icons'
-// import logo from '../../assets/logomoon.png'
-// import {MenuIcon, XIcon} from '@heroicons/react/outline'
 
 const Navigation = () => {
   const [nav, setNav] = useState(true);

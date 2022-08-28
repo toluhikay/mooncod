@@ -27,7 +27,7 @@ const Footer = ({children}) => {
   return (
     <Fragment>
       
-      <article className='px-3 bg-[#080A0C] '>
+      <article className='px-3 bg-[#080A0C] pt-6 lg:pt-0'>
         <div className='bg-[#080A0C] text-white flex flex-col md:flex-row md:justify-evenly md:pt-24 pb-6 '>
           <div>
             <Link to='/faq' className=' md:text-lg font-medium mb-4 '>COMPANY</Link>
@@ -40,7 +40,7 @@ const Footer = ({children}) => {
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Affiliate</Link>
                 </li>
                  <li className='mb-4'>
-                  <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Blog</Link>
+                  <a href='https://blog.mooncod.io' target='blank' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Blog</a>
                  </li>
                 <li className='mb-4'>
                   <Link to='/' className='md:text-base text-xs text-[#DAE0E7] font-medium' >Digital Asset Disclosures</Link>
@@ -90,7 +90,7 @@ const Footer = ({children}) => {
             <p className=' md:text-lg font-medium mb-4 '>JOIN OUR COMMUNITY</p>
             <div className=''>
               <p className='w-80 mb-4 md:text-lg sm:text-sm text-xs'>Subscribe to receive updates, access to exclusive deals, and more.</p>
-              <form action="" onSubmit={sendEmail}>
+              <form action="" className='w-[80%] md:w-[60%] lg:w-full' onSubmit={sendEmail}>
                 <input type="text" placeholder='Enter your email address' className=' bg-inherit appearance-none border-[#fff]  border-2 py-3 px-3 w-full md:w-72 rounded-full outline-none text-white mb-4'/>
                 <br />
                 <button className='bg-gradient-to-tr from-[#008AED] to-[#54F0D1] w-full md:w-72 py-3 rounded-full'>Subscribe</button>
